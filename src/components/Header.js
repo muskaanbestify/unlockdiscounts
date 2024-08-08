@@ -62,6 +62,395 @@ function Header() {
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
   };
 
+  //men fashion links object
+  const men = {
+    topWear: [
+      ["/", "T-Shirts"],
+      ["/", "Casual Shirts"],
+      ["/", "Formal Shirts"],
+      ["/", "Sweatshirts"],
+      ["/", "Sweaters"],
+      ["/", "Jackets"],
+      ["/", "Blazers & Coats"],
+      ["/", "Suits"],
+      ["/", "Rain Jackets"],
+    ],
+    indianFestivalWear: [
+      ["/", "Kurtas & Kurta Sets"],
+      ["/", "Sherwanis"],
+      ["/", "Nehru Jackets"],
+      ["/", "Dhotis"],
+    ],
+    bottomWear: [
+      ["/", "Jeans"],
+      ["/", "Casual Trousers"],
+      ["/", "Formal Trousers"],
+      ["/", "Shorts"],
+      ["/", "Track Pants & Joggers"],
+    ],
+    innerWear: [
+      ["/", "Briefs & Trunks"],
+      ["/", "Boxers"],
+      ["/", "Vests"],
+      ["/", "Sleepwear & Loungewear"],
+      ["/", "Thermals"],
+    ],
+    footwear: [
+      ["/", "Casual Shoes"],
+      ["/", "Sports Shoes"],
+      ["/", "Sneakers"],
+      ["/", "Formal Shoes"],
+      ["/", "Sandals & Floaters"],
+      ["/", "Flip Flops"],
+      ["/", "Socks"],
+    ],
+    sports: [
+      ["/", "Sports Shoes"],
+      ["/", "Sports Sandals"],
+      ["/", "Active T-Shirts"],
+      ["/", "Track Pants & Shorts"],
+      ["/", "Track Suits"],
+      ["/", "Jackets & Sweatshirts"],
+      ["/", "Sports Accessories"],
+      ["/", "Swimwear"],
+    ],
+    gadgets: [
+      ["/", "Smart Wearables"],
+      ["/", "Fitness Gadgets"],
+      ["/", "Headphones"],
+      ["/", "Speakers"],
+    ],
+    fashionAccessories: [
+      ["/", "Wallets"],
+      ["/", "Belts"],
+      ["/", "Perfumes & Body Mists"],
+      ["/", "Trimmers"],
+      ["/", "Deodorants"],
+      ["/", "Ties, Cufflinks & Pocket Squares"],
+      ["/", "Accessory Gift Sets"],
+      ["/", "Caps & Hats"],
+      ["/", "Mufflers, Scarves & Gloves"],
+      ["/", "Phone Cases"],
+      ["/", "Rings & Wristwear"],
+      ["/", "Helmets"],
+    ],
+  };
+
+  // women fashion links object
+  const women = {
+    indianFusionWear: [
+      ["/", "Kurtas & Suits"],
+      ["/", "Kurtis, Tunics & Tops"],
+      ["/", "Sarees"],
+      ["/", "Ethnic Wear"],
+      ["/", "Leggings, Salwars & Churidars"],
+      ["/", "Skirts & Palazzos"],
+      ["/", "Dress Materials"],
+      ["/", "Lehenga Cholis"],
+      ["/", "Dupattas & Shawls"],
+      ["/", "Jackets"],
+    ],
+    westernWear: [
+      ["/", "Dresses"],
+      ["/", "Tops"],
+      ["/", "Tshirts"],
+      ["/", "Jeans"],
+      ["/", "Trousers & Capris"],
+      ["/", "Shorts & Skirts"],
+      ["/", "Co-ords"],
+      ["/", "Playsuits"],
+      ["/", "Jumpsuits"],
+      ["/", "Shrugs"],
+      ["/", "Sweaters & Sweatshirts"],
+      ["/", "Jackets & Coats"],
+      ["/", "Blazers & Waistcoats"],
+    ],
+    Footwear: [
+      ["/", "Flats"],
+      ["/", "Casual Shoes"],
+      ["/", "Heels"],
+      ["/", "Boots"],
+      ["/", "Sports Shoes & Floaters"],
+    ],
+    sports: [
+      ["/", "Clothing"],
+      ["/", "Footwear"],
+      ["/", "Sports Accessories"],
+      ["/", "Sports Equipment"],
+    ],
+    lingerieAndSleepWear: [
+      ["/", "Bra"],
+      ["/", "Briefs"],
+      ["/", "Shapewear"],
+      ["/", "Sleepwear & Loungewear"],
+      ["/", "Swimwear"],
+      ["/", "Camisoles & Thermals"],
+    ],
+    beautyAndPersonalCare: [
+      ["/", "Makeup"],
+      ["/", "Skincare"],
+      ["/", "Premium Beauty"],
+      ["/", "Lipsticks"],
+      ["/", "Fragrances"],
+    ],
+    gadgets: [
+      ["/", "Smart Wearables"],
+      ["/", "Fitness Gadgets"],
+      ["/", "Headphones"],
+      ["/", "Speakers"],
+    ],
+    jewellery: [
+      ["/", "Fashion Jewellery"],
+      ["/", "Fine Jewellery"],
+      ["/", "Earrings"],
+    ],
+  };
+  // kids fashion links object
+  const kids = {
+    boysClothing: [
+      ["/", "T-Shirts"],
+      ["/", "Shirts"],
+      ["/", "Shorts"],
+      ["/", "Jeans"],
+      ["/", "Trousers"],
+      ["/", "Clothing Sets"],
+      ["/", "Ethnic Wear"],
+      ["/", "Track Pants & Pyjamas"],
+      ["/", "Jacket, Sweater & Sweatshirts"],
+      ["/", "Party Wear"],
+      ["/", "Innerwear & Thermals"],
+      ["/", "Nightwear & Loungewear"],
+      ["/", "Value Packs"],
+    ],
+    girlsClothing: [
+      ["/", "Dresses"],
+      ["/", "Tops"],
+      ["/", "Tshirts"],
+      ["/", "Clothing Sets"],
+      ["/", "Lehenga choli"],
+      ["/", "Kurta Sets"],
+      ["/", "Party wear"],
+      ["/", "Dungarees & Jumpsuits"],
+      ["/", "Skirts & shorts"],
+      ["/", "Tights & Leggings"],
+      ["/", "Jeans, Trousers & Capris"],
+      ["/", "Jacket, Sweater & Sweatshirts"],
+      ["/", "Innerwear & Thermals"],
+      ["/", "Nightwear & Loungewear"],
+      ["/", "Value Packs"],
+    ],
+    footwear: [
+      ["/", "Casual Shoes"],
+      ["/", "Flipflops"],
+      ["/", "Sports Shoes"],
+      ["/", "Flats"],
+      ["/", "Sandals"],
+      ["/", "Heels"],
+      ["/", "School Shoes"],
+      ["/", "Socks"],
+    ],
+    toysAndGames: [
+      ["/", "Learning & Development"],
+      ["/", "Activity Toys"],
+      ["/", "Soft Toys"],
+      ["/", "Action Figure / Play set"],
+    ],
+    infants: [
+      ["/", "Bodysuits"],
+      ["/", "Rompers & Sleepsuits"],
+      ["/", "Clothing Sets"],
+      ["/", "Tshirts & Tops"],
+      ["/", "Dresses"],
+      ["/", "Bottom wear"],
+      ["/", "Winter Wear"],
+      ["/", "Innerwear & Sleepwear"],
+      ["/", "Infant Care"],
+    ],
+    kidsAccessories: [
+      ["/", "Bags & Backpacks"],
+      ["/", "Watches"],
+      ["/", "Jewellery & Hair accessory"],
+      ["/", "Sunglasses"],
+      ["/", "Masks & Protective Gears"],
+      ["/", "Caps & Hats"],
+    ],
+    brands: [
+      ["/", "H&M"],
+      ["/", "Max Kids"],
+      ["/", "Pantaloons"],
+      ["/", "United Colors Of Benetton Kids"],
+      ["/", "YK"],
+      ["/", "U.S. Polo Assn. Kids"],
+      ["/", "Mothercare"],
+      ["/", "HRX"],
+    ],
+  };
+
+  //home and living links object
+  const home = {
+    bedLinen: [
+      ["/", "Bed Runners"],
+      ["/", "Mattress Protectors"],
+      ["/", "Bedsheets"],
+      ["/", "Bedding Sets"],
+      ["/", "Blankets, Quilts & Dohars"],
+      ["/", "Pillows & Pillow Covers"],
+      ["/", "Bed Covers"],
+      ["/", "Diwan Sets"],
+      ["/", "Chair Pads & Covers"],
+      ["/", "Sofa Covers"],
+    ],
+    flooring: [
+      ["/", "Floor Runners"],
+      ["/", "Carpets"],
+      ["/", "Floor Mats & Dhurries"],
+      ["/", "Door Mats"],
+    ],
+    bath: [
+      ["/", "Bath Towels"],
+      ["/", "Hand & Face Towels"],
+      ["/", "Beach Towels"],
+      ["/", "Towels Set"],
+      ["/", "Bath Rugs"],
+      ["/", "Bath Robes"],
+      ["/", "Bathroom Accessories"],
+      ["/", "Shower Curtains"],
+    ],
+    lamps: [
+      ["/", "Floor Lamps"],
+      ["/", "Ceiling Lamps"],
+      ["/", "Table Lamps"],
+      ["/", "Wall Lamps"],
+      ["/", "Outdoor Lamps"],
+      ["/", "String Lights"],
+    ],
+    homeDecor: [
+      ["/", "Plants & Planters"],
+      ["/", "Aromas & Candles"],
+      ["/", "Clocks"],
+      ["/", "Mirrors"],
+      ["/", "Wall Décor"],
+      ["/", "Festive Decor"],
+      ["/", "Pooja Essentials"],
+      ["/", "Wall Shelves"],
+      ["/", "Fountains"],
+      ["/", "Showpieces & Vases"],
+      ["/", "Ottoman"],
+    ],
+    kitchen: [
+      ["/", "Table Runners"],
+      ["/", "Dinnerware & Serveware"],
+      ["/", "Cups and Mugs"],
+      ["/", "Bakeware & Cookware"],
+      ["/", "Kitchen Storage & Tools"],
+      ["/", "Bar & Drinkware"],
+      ["/", "Table Covers & Furnishings"],
+    ],
+    storage: [
+      ["/", "Bins"],
+      ["/", "Hangers"],
+      ["/", "Organisers"],
+      ["/", "Hooks & Holders"],
+      ["/", "Laundry Bags"],
+    ],
+    brands: [
+      ["/", "H&M"],
+      ["/", "Marks & Spencer"],
+      ["/", "Home Centre"],
+      ["/", "Spaces"],
+      ["/", "D'Decor"],
+      ["/", "Story@Home"],
+      ["/", "Pure Home & Living"],
+      ["/", "Swayam"],
+      ["/", "Raymond Home"],
+      ["/", "Maspar"],
+      ["/", "My Trident"],
+      ["/", "Cortina"],
+      ["/", "Random"],
+      ["/", "Ellementry"],
+      ["/", "ROMEE"],
+      ["/", "SEJ by Nisha Gupta"],
+    ],
+  };
+
+  //beauty section links object
+  const beauty = {
+    makeup: [
+      ["/", "Lipstick"],
+      ["/", "Lip Gloss"],
+      ["/", "Lip Liner"],
+      ["/", "Mascara"],
+      ["/", "Eyeliner"],
+      ["/", "Kajal"],
+      ["/", "Eyeshadow"],
+      ["/", "Foundation"],
+      ["/", "Primer"],
+      ["/", "Concealer"],
+      ["/", "Compact"],
+      ["/", "Nail Polish"],
+    ],
+    skincare: [
+      ["/", "Face Moisturiser"],
+      ["/", "Cleanser"],
+      ["/", "Masks & Peel"],
+      ["/", "Sunscreen"],
+      ["/", "Serum"],
+      ["/", "Face Wash"],
+      ["/", "Eye Cream"],
+      ["/", "Lip Balm"],
+      ["/", "Body Lotion"],
+      ["/", "Body Wash"],
+      ["/", "Body Scrub"],
+      ["/", "Hand Cream"],
+    ],
+    hairCare: [
+      ["/", "Shampoo"],
+      ["/", "Conditioner"],
+      ["/", "Hair Cream"],
+      ["/", "Hair Oil"],
+      ["/", "Hair Gel"],
+      ["/", "Hair Color"],
+      ["/", "Hair Serum"],
+      ["/", "Hair Accessory"],
+    ],
+    fragrence: [
+      ["/", "Perfume"],
+      ["/", "Deodorant"],
+      ["/", "Body Mist"],
+    ],
+    appliances: [
+      ["/", "Hair Straightener"],
+      ["/", "Hair Dryer"],
+      ["/", "Epilator"],
+    ],
+    mensGrooming: [
+      ["/", "Trimmers"],
+      ["/", "Beard Oil"],
+      ["/", "Hair Wax"],
+    ],
+    beautyGift: [
+      ["/", "Beauty Gift"],
+      ["/", "Makeup Kit"],
+    ],
+    topBrands: [
+      ["/", "Lakme"],
+      ["/", "Maybelline"],
+      ["/", "Loreal"],
+      ["/", "Philips"],
+      ["/", "Bath & Body Works"],
+      ["/", "The Body Shop"],
+      ["/", "Biotique"],
+      ["/", "Mamaearth"],
+      ["/", "Mcaffeine"],
+      ["/", "Nivea"],
+      ["/", "Lotus Herbals"],
+      ["/", "Loreal Professionnel"],
+      ["/", "KAMA AYURVEDA"],
+      ["/", "M.A.C"],
+      ["/", "Forest Essentials"],
+    ],
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -223,47 +612,34 @@ function Header() {
                           className="mobile-sub-link"
                           onClick={handleCloseButton}
                         >
-                          T-Shirts
+                          Topwear
                         </Link>
                         <span
                           className="mobile-dropdown-logo-container"
                           onClick={() =>
-                            handleSubFashionDropdown("men-tshirts")
+                            handleSubFashionDropdown("men-topWear")
                           }
                         >
-                          {subFashionDropdown === "men-tshirts" ? (
+                          {subFashionDropdown === "men-topWear" ? (
                             <KeyboardArrowDownIcon />
                           ) : (
                             <KeyboardArrowRightIcon />
                           )}
                         </span>
                       </Box>
-                      {subFashionDropdown === "men-tshirts" && (
+                      {subFashionDropdown === "men-topWear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Casual Shirts
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Formal Shirts
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Sweatshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Sweaters
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Jackets
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Blazers & Coats
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Suits
-                          </Link>
-                          <Link className="mobile-sub-link-child " to="/">
-                            Rain Jackets
-                          </Link>
+                          {men.topWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -294,16 +670,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-indian-festival" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Kurtas & Kurta Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sherwanis
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Nehru Jackets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Dhotis</Link>
+                          {men.indianFestivalWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -334,17 +711,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-bottomwear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">Jeans</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Casual Trousers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Formal Trousers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Shorts</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Track Pants & Joggers
-                          </Link>
+                          {men.bottomWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -375,17 +752,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-innerwear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Briefs & Trunks
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Boxers</Link>
-                          <Link className="mobile-sub-link-child ">Vests</Link>
-                          <Link className="mobile-sub-link-child ">
-                            leepwear & Loungewear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Thermals
-                          </Link>
+                          {men.innerWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -424,22 +801,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-Footwear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Casual Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sneakers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sandals & Floaters
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Flip Flops
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Socks</Link>
+                          {men.footwear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -492,30 +864,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-sports" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Sandals
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Active T-Shirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Track Pants & Shorts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Tracksuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jackets & Sweatshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Accessories
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Swimwear
-                          </Link>
+                          {men.sports.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -546,18 +905,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-Gadgets" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Smart Wearables
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Fitness Gadgets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Headphones
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Speakers
-                          </Link>
+                          {men.gadgets.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -588,41 +946,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "men-Fashion-Accessories" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Wallets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Belts</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Perfumes & Body Mists
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Trimmers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Deodorants
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Ties</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Cufflinks & Pocket Squares
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Accessory Gift Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Caps & Hats
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Mufflers, Scarves & Gloves
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Phone Cases
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Rings & Wristwear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Helmets
-                          </Link>
+                          {men.fashionAccessories.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -699,34 +1033,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-indian-fusion-wear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Kurtas & Suits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Kurtis, Tunics & Tops
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Sarees</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Ethnic Wear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Leggings, Salwars & Churidars
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Skirts & Palazzos
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Dress Materials
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lehenga Cholis
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Dupattas & Shawls
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jackets
-                          </Link>
+                          {women.indianFusionWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -773,39 +1090,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-Western Wear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Dresses
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Tops</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Tshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Jeans</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Trousers & Capris
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Shorts & Skirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Co-ords
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Playsuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jumpsuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Shrugs</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sweaters & Sweatshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jackets & Coats
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Blazers & Waistcoats
-                          </Link>
+                          {women.westernWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -860,15 +1155,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-footwear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">Flats</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Casual Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Heels</Link>
-                          <Link className="mobile-sub-link-child ">Boots</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Shoes & Floaters
-                          </Link>
+                          {women.Footwear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -899,18 +1196,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-sports-wear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Clothing
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Footwear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Accessories
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Equipment
-                          </Link>
+                          {women.sports.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -941,20 +1237,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-lingerie-sleepwear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">Bra</Link>
-                          <Link className="mobile-sub-link-child ">Briefs</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Shapewear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sleepwear & Loungewear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Swimwear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Camisoles & Thermals
-                          </Link>
+                          {women.lingerieAndSleepWear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -973,28 +1266,29 @@ function Header() {
                         <span
                           className="mobile-dropdown-logo-container"
                           onClick={() =>
-                            handleSubFashionDropdown("women-gadgets")
+                            handleSubFashionDropdown("women-beauty")
                           }
                         >
-                          {subFashionDropdown === "women-gadgets" ? (
+                          {subFashionDropdown === "women-beauty" ? (
                             <KeyboardArrowDownIcon />
                           ) : (
                             <KeyboardArrowRightIcon />
                           )}
                         </span>
                       </Box>
-                      {subFashionDropdown === "women-gadgets" && (
+                      {subFashionDropdown === "women-beauty" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">Makeup</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Skincare
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lipsticks
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Fragrances
-                          </Link>
+                          {women.beautyAndPersonalCare.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1025,18 +1319,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-Gadgets" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Smart Wearables
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Fitness Gadgets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Headphones
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Speakers
-                          </Link>
+                          {women.gadgets.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1067,15 +1360,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "women-Jewellery" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Fashion Jewellery
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Fine Jewellery
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Earrings
-                          </Link>
+                          {women.jewellery.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1155,43 +1450,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-boys-clothing" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Boys Clothing
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            T-Shirts
-                          </Link>
-                          <Link className="mobile-sub-link-child "></Link>
-                          <Link className="mobile-sub-link-child ">Shirts</Link>
-                          <Link className="mobile-sub-link-child ">Shorts</Link>
-                          <Link className="mobile-sub-link-child ">Jeans</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Trousers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Clothing Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Ethnic Wear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Track Pants & Pyjamas
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jacket, Sweater & Sweatshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Party Wear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Innerwear & Thermals
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Nightwear & Loungewear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Value Packs
-                          </Link>
+                          {kids.boysClothing.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1222,52 +1491,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-girls-clothing" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Dresses
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Tops</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Tshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Clothing Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lehenga choli
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Kurta Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Party wear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Dungarees & Jumpsuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Skirts & shorts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Tights & Leggings
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jeans, Trousers & Capris
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jacket, Sweater & Sweatshirts
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Innerwear & Thermals
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Nightwear & Loungewear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Value Packs
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Footwear
-                          </Link>
+                          {kids.girlsClothing.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1298,24 +1532,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-footwear" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Casual Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Flipflops
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sports Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Flats</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sandals
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Heels</Link>
-                          <Link className="mobile-sub-link-child ">
-                            School Shoes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Socks</Link>
+                          {kids.footwear.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1344,18 +1571,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-toys" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Learning & Development
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Activity Toys
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Soft Toys
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Action Figure / Play set
-                          </Link>
+                          {kids.toysAndGames.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1386,33 +1612,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-Infants" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Bodysuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Rompers & Sleepsuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Clothing Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Tshirts & Tops
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Dresses
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bottom wear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Winter Wear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Innerwear & Sleepwear
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Infant Care
-                          </Link>
+                          {kids.infants.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1459,30 +1669,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-accessories" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Bodysuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Rompers & Sleepsuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bags & Backpacks
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Watches
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Jewellery & Hair accessory
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sunglasses
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Masks & Protective Gears
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Caps & Hats
-                          </Link>
+                          {kids.kidsAccessories.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1513,30 +1710,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "kids-brands" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Bodysuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Rompers & Sleepsuits
-                          </Link>
-                          <Link className="mobile-sub-link-child ">H&M</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Max Kids
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Pantaloons
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            United Colors Of Benetton Kids
-                          </Link>
-                          <Link className="mobile-sub-link-child ">YK</Link>
-                          <Link className="mobile-sub-link-child ">
-                            U.S. Polo Assn. Kids
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Mothercare
-                          </Link>
-                          <Link className="mobile-sub-link-child ">HRX</Link>
+                          {kids.brands.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1592,36 +1776,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-bed-furnishing" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Bed Runners
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Mattress Protectors
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bedsheets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bedding Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Blankets, Quilts & Dohars
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Pillows & Pillow Covers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bed Covers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Diwan Sets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Chair Pads & Covers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sofa Covers
-                          </Link>
+                          {home.bedLinen.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1652,18 +1817,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-Flooring" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Floor Runners
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Carpets
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Floor Mats & Dhurries
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Door Mats
-                          </Link>
+                          {home.flooring.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1692,30 +1856,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-Bath" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Bath Towels
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hand & Face Towels
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Beach Towels
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Towels Set
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bath Rugs
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bath Robes
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bathroom Accessories
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Shower Curtains
-                          </Link>
+                          {home.bath.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1746,24 +1897,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-lamps-lighting" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Floor Lamps
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Ceiling Lamps
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Table Lamps
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Wall Lamps
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Outdoor Lamps
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            String Lights
-                          </Link>
+                          {home.lamps.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1792,37 +1936,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-Décor" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Plants & Planters
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Aromas & Candles
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Clocks</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Mirrors
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Wall Décor
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Festive Decor
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Pooja Essentials
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Wall Shelves
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Fountains
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Showpieces & Vases
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Ottoman
-                          </Link>
+                          {home.homeDecor.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1877,27 +2001,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-kitchen-table" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Table Runners
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Dinnerware & Serveware
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Cups and Mugs
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bakeware & Cookware
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Kitchen Storage & Tools
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bar & Drinkware
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Table Covers & Furnishings
-                          </Link>
+                          {home.kitchen.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1928,19 +2042,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-Storage" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">Bins</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hangers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Organisers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hooks & Holders
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Laundry Bags
-                          </Link>
+                          {home.storage.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -1971,42 +2083,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "home-Brands" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">H&M</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Marks & Spencer
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Home Centre
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Spaces</Link>
-                          <Link className="mobile-sub-link-child ">
-                            D'Decor
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Story@Home
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Pure Home & Living
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Swayam</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Raymond Home
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Maspar</Link>
-                          <Link className="mobile-sub-link-child ">
-                            My Trident
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Cortina
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Random</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Ellementry
-                          </Link>
-                          <Link className="mobile-sub-link-child ">ROMEE</Link>
-                          <Link className="mobile-sub-link-child ">
-                            SEJ by Nisha Gupta
-                          </Link>
+                          {home.brands.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2062,38 +2149,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-Makeup" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Lipstick
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lip Gloss
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lip Liner
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Mascara
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Eyeliner
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Kajal</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Eyeshadow
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Foundation
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Primer</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Concealer
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Compact
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Nail Polish
-                          </Link>
+                          {beauty.makeup.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2127,40 +2193,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-skincare-bath-body" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Face Moisturiser
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Cleanser
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Masks & Peel
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Sunscreen
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Serum</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Face Wash
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Eye Cream
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lip Balm
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Body Lotion
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Body Wash
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Body Scrub
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hand Cream
-                          </Link>
+                          {beauty.skincare.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2207,30 +2250,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-Haircare" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Shampoo
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Conditioner
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Cream
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Oil
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Gel
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Color
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Serum
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Accessory
-                          </Link>
+                          {beauty.hairCare.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2261,15 +2291,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-Fragrances" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Perfume
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Deodorant
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Body Mist
-                          </Link>
+                          {beauty.fragrence.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2300,15 +2332,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-Appliances" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Straightener
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Dryer
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Epilator
-                          </Link>
+                          {beauty.appliances.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2339,15 +2373,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-Men's-Grooming" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Trimmers
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Beard Oil
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Hair Wax
-                          </Link>
+                          {beauty.mensGrooming.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2378,12 +2414,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-gifts-makeup-set" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">
-                            Beauty Gift
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Makeup Kit
-                          </Link>
+                          {beauty.beautyGift.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2414,43 +2455,17 @@ function Header() {
                       </Box>
                       {subFashionDropdown === "beauty-Top-Brands" && (
                         <Box onClick={handleCloseButton}>
-                          <Link className="mobile-sub-link-child ">Lakme</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Maybelline
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Loreal</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Philips
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Bath & Body Works
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            The Body Shop
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Biotique
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Mamaearth
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            MCaffeine
-                          </Link>
-                          <Link className="mobile-sub-link-child ">Nivea</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Lotus Herbals
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            Loreal Professionnel{" "}
-                          </Link>
-                          <Link className="mobile-sub-link-child ">
-                            KAMA AYURVEDA
-                          </Link>
-                          <Link className="mobile-sub-link-child ">M.A.C</Link>
-                          <Link className="mobile-sub-link-child ">
-                            Forest Essentials
-                          </Link>
+                          {beauty.topBrands.map((link, index) => {
+                            return (
+                              <Link
+                                className="mobile-sub-link-child "
+                                key={index}
+                                to={link[0]}
+                              >
+                                {link[1]}
+                              </Link>
+                            );
+                          })}
                         </Box>
                       )}
                     </Box>
@@ -2519,21 +2534,23 @@ function Header() {
                     height: "inherit",
                   }}
                 >
-                  <Link className="red-heading">T-Shirts</Link>
-                  <Link>Casual Shirts</Link>
-                  <Link>Formal Shirts</Link>
-                  <Link>Sweatshirts</Link>
-                  <Link>Sweaters</Link>
-                  <Link>Jackets</Link>
-                  <Link>Blazers & Coats</Link>
-                  <Link>Suits</Link>
-                  <Link>Rain Jackets</Link>
+                  <Link className="red-heading">Topwear</Link>
+                  {men.topWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="red-heading">Indian & Festive Wear</Link>
-                  <Link>Kurtas & Kurta Sets</Link>
-                  <Link>Sherwanis</Link>
-                  <Link>Nehru Jackets</Link>
-                  <Link>Dhotis</Link>
+                  {men.indianFestivalWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2544,19 +2561,23 @@ function Header() {
                   }}
                 >
                   <Link className="red-heading">Bottomwear</Link>
-                  <Link>Jeans</Link>
-                  <Link>Casual Trousers</Link>
-                  <Link>Formal Trousers</Link>
-                  <Link>Shorts</Link>
-                  <Link>Track Pants & Joggers</Link>
+                  {men.bottomWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="red-heading">Innerwear & Sleepwear</Link>
-                  <Link>Briefs & Trunks</Link>
-                  <Link>Boxers</Link>
-                  <Link>Vests</Link>
-                  <Link>leepwear & Loungewear</Link>
-                  <Link>Thermals</Link>
+                  {men.innerWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="red-heading">Plus Size</Link>
@@ -2570,12 +2591,13 @@ function Header() {
                   }}
                 >
                   <Link className="red-heading">Footwear</Link>
-                  <Link>Casual Shoes</Link>
-                  <Link>Sports Shoes</Link>
-                  <Link>Sneakers</Link>
-                  <Link>Sandals & Floaters</Link>
-                  <Link>Flip Flops</Link>
-                  <Link>Socks</Link>
+                  {men.footwear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="red-heading">Personal Care & Grooming</Link>
@@ -2591,21 +2613,23 @@ function Header() {
                   }}
                 >
                   <Link className="red-heading">Sports & Active Wear</Link>
-                  <Link>Sports Shoes</Link>
-                  <Link>Sports Sandals</Link>
-                  <Link>Active T-Shirts</Link>
-                  <Link>Track Pants & Shorts</Link>
-                  <Link>Tracksuits</Link>
-                  <Link>Jackets & Sweatshirts</Link>
-                  <Link>Sports Accessories</Link>
-                  <Link>Swimwear</Link>
+                  {men.sports.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="red-heading">Gadgets</Link>
-                  <Link>Smart Wearables</Link>
-                  <Link>Fitness Gadgets</Link>
-                  <Link>Headphones</Link>
-                  <Link>Speakers</Link>
+                  {men.gadgets.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2616,19 +2640,13 @@ function Header() {
                   }}
                 >
                   <Link className="red-heading">Fashion Accessories</Link>
-                  <Link>Wallets</Link>
-                  <Link>Belts</Link>
-                  <Link>Perfumes & Body Mists</Link>
-                  <Link>Trimmers</Link>
-                  <Link>Deodorants</Link>
-                  <Link>Ties</Link>
-                  <Link>Cufflinks & Pocket Squares</Link>
-                  <Link>Accessory Gift Sets</Link>
-                  <Link>Caps & Hats</Link>
-                  <Link>Mufflers, Scarves & Gloves</Link>
-                  <Link>Phone Cases</Link>
-                  <Link>Rings & Wristwear</Link>
-                  <Link>Helmets</Link>
+                  {men.fashionAccessories.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
 
                   <span className="black-horizantal-line"></span>
 
@@ -2662,16 +2680,13 @@ function Header() {
                   }}
                 >
                   <Link className="pink-heading">Indian & Fusion Wear</Link>
-                  <Link>Kurtas & Suits</Link>
-                  <Link>Kurtis, Tunics & Tops</Link>
-                  <Link>Sarees</Link>
-                  <Link>Ethnic Wear</Link>
-                  <Link>Leggings, Salwars & Churidars</Link>
-                  <Link>Skirts & Palazzos</Link>
-                  <Link>Dress Materials</Link>
-                  <Link>Lehenga Cholis</Link>
-                  <Link>Dupattas & Shawls</Link>
-                  <Link>Jackets</Link>
+                  {women.indianFusionWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
 
                   <span className="black-horizantal-line"></span>
                   <Link className="pink-heading">Belts, Scarves & More</Link>
@@ -2686,19 +2701,13 @@ function Header() {
                   }}
                 >
                   <Link className="pink-heading">Western Wear</Link>
-                  <Link>Dresses</Link>
-                  <Link>Tops</Link>
-                  <Link>Tshirts</Link>
-                  <Link>Jeans</Link>
-                  <Link>Trousers & Capris</Link>
-                  <Link>Shorts & Skirts</Link>
-                  <Link>Co-ords</Link>
-                  <Link>Playsuits</Link>
-                  <Link>Jumpsuits</Link>
-                  <Link>Shrugs</Link>
-                  <Link>Sweaters & Sweatshirts</Link>
-                  <Link>Jackets & Coats</Link>
-                  <Link>Blazers & Waistcoats</Link>
+                  {women.westernWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
 
                   <span className="black-horizantal-line"></span>
 
@@ -2716,17 +2725,22 @@ function Header() {
                   <Link className="pink-heading">Sunglasses & Frames</Link>
                   <Link className="pink-heading">Footwear</Link>
 
-                  <Link>Flats</Link>
-                  <Link>Casual Shoes</Link>
-                  <Link>Heels</Link>
-                  <Link>Boots</Link>
-                  <Link>Sports Shoes & Floaters</Link>
+                  {women.Footwear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="pink-heading">Sports & Active Wear</Link>
-                  <Link>Clothing</Link>
-                  <Link>Footwear</Link>
-                  <Link>Sports Accessories</Link>
-                  <Link>Sports Equipment</Link>
+                  {women.sports.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2737,20 +2751,23 @@ function Header() {
                   }}
                 >
                   <Link className="pink-heading">Lingerie & Sleepwear</Link>
-                  <Link>Bra</Link>
-                  <Link>Briefs</Link>
-                  <Link>Shapewear</Link>
-                  <Link>Sleepwear & Loungewear</Link>
-                  <Link>Swimwear</Link>
-                  <Link>Camisoles & Thermals</Link>
+                  {women.lingerieAndSleepWear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="pink-heading">Beauty & Personal Care</Link>
-                  <Link>Makeup</Link>
-                  <Link>Skincare</Link>
-                  <Link>Premium Beauty</Link>
-                  <Link>Lipsticks</Link>
-                  <Link>Fragrances</Link>
+                  {women.beautyAndPersonalCare.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2761,16 +2778,23 @@ function Header() {
                   }}
                 >
                   <Link className="pink-heading">Gadgets</Link>
-                  <Link>Smart Wearables</Link>
-                  <Link>Fitness Gadgets</Link>
-                  <Link>Headphones</Link>
-                  <Link>Speakers</Link>
+                  {women.gadgets.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="pink-heading">Jewellery</Link>
-                  <Link>Fashion Jewellery</Link>
-                  <Link>Fine Jewellery</Link>
-                  <Link>Earrings</Link>
+                  {women.jewellery.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
 
                   <span className="black-horizantal-line"></span>
 
@@ -2805,19 +2829,13 @@ function Header() {
                   }}
                 >
                   <Link className="orange-heading">Boys Clothing</Link>
-                  <Link>T-Shirts</Link>
-                  <Link>Shirts</Link>
-                  <Link>Shorts</Link>
-                  <Link>Jeans</Link>
-                  <Link>Trousers</Link>
-                  <Link>Clothing Sets</Link>
-                  <Link>Ethnic Wear</Link>
-                  <Link>Track Pants & Pyjamas</Link>
-                  <Link>Jacket, Sweater & Sweatshirts</Link>
-                  <Link>Party Wear</Link>
-                  <Link>Innerwear & Thermals</Link>
-                  <Link>Nightwear & Loungewear</Link>
-                  <Link>Value Packs</Link>
+                  {kids.boysClothing.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2828,21 +2846,13 @@ function Header() {
                   }}
                 >
                   <Link className="orange-heading">Girls Clothing</Link>
-                  <Link>Dresses</Link>
-                  <Link>Tops</Link>
-                  <Link>Tshirts</Link>
-                  <Link>Clothing Sets</Link>
-                  <Link>Lehenga choli</Link>
-                  <Link>Kurta Sets</Link>
-                  <Link>Party wear</Link>
-                  <Link>Dungarees & Jumpsuits</Link>
-                  <Link>Skirts & shorts</Link>
-                  <Link>Tights & Leggings</Link>
-                  <Link>Jeans, Trousers & Capris</Link>
-                  <Link>Jacket, Sweater & Sweatshirts</Link>
-                  <Link>Innerwear & Thermals</Link>
-                  <Link>Nightwear & Loungewear</Link>
-                  <Link>Value Packs</Link>
+                  {kids.girlsClothing.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2853,21 +2863,23 @@ function Header() {
                   }}
                 >
                   <Link className="orange-heading">Footwear</Link>
-                  <Link>Casual Shoes</Link>
-                  <Link>Flipflops</Link>
-                  <Link>Sports Shoes</Link>
-                  <Link>Flats</Link>
-                  <Link>Sandals</Link>
-                  <Link>Heels</Link>
-                  <Link>School Shoes</Link>
-                  <Link>Socks</Link>
+                  {kids.footwear.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="orange-heading">Toys & Games</Link>
-                  <Link>Learning & Development</Link>
-                  <Link>Activity Toys</Link>
-                  <Link>Soft Toys</Link>
-                  <Link>Action Figure / Play set</Link>
+                  {kids.toysAndGames.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2878,15 +2890,13 @@ function Header() {
                   }}
                 >
                   <Link className="orange-heading">Infants</Link>
-                  <Link>Bodysuits</Link>
-                  <Link>Rompers & Sleepsuits</Link>
-                  <Link>Clothing Sets</Link>
-                  <Link>Tshirts & Tops</Link>
-                  <Link>Dresses</Link>
-                  <Link>Bottom wear</Link>
-                  <Link>Winter Wear</Link>
-                  <Link>Innerwear & Sleepwear</Link>
-                  <Link>Infant Care</Link>
+                  {kids.infants.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="orange-heading">Home & Bath</Link>
                   <Link className="orange-heading">Personal Care</Link>
@@ -2900,23 +2910,23 @@ function Header() {
                   }}
                 >
                   <Link className="orange-heading">Kids Accessories</Link>
-                  <Link>Bags & Backpacks</Link>
-                  <Link>Watches</Link>
-                  <Link>Jewellery & Hair accessory</Link>
-                  <Link>Sunglasses</Link>
-                  <Link>Masks & Protective Gears</Link>
-                  <Link>Caps & Hats</Link>
+                  {kids.kidsAccessories.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="orange-heading">Brands</Link>
-                  <Link>H&M</Link>
-                  <Link>Max Kids</Link>
-                  <Link>Pantaloons</Link>
-                  <Link>United Colors Of Benetton Kids</Link>
-                  <Link>YK</Link>
-                  <Link>U.S. Polo Assn. Kids</Link>
-                  <Link t>Mothercare</Link>
-                  <Link>HRX</Link>
+                  {kids.brands.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
               </Box>
             )}
@@ -2949,22 +2959,22 @@ function Header() {
                   }}
                 >
                   <Link className="yellow-heading">Bed Linen & Furnishing</Link>
-                  <Link>Bed Runners</Link>
-                  <Link>Mattress Protectors</Link>
-                  <Link>Bedsheets</Link>
-                  <Link>Bedding Sets</Link>
-                  <Link>Blankets, Quilts & Dohars</Link>
-                  <Link>Pillows & Pillow Covers</Link>
-                  <Link>Bed Covers</Link>
-                  <Link>Diwan Sets</Link>
-                  <Link>Chair Pads & Covers</Link>
-                  <Link>Sofa Covers</Link>
+                  {home.bedLinen.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="yellow-heading">Flooring</Link>
-                  <Link>Floor Runners</Link>
-                  <Link>Carpets</Link>
-                  <Link>Floor Mats & Dhurries</Link>
-                  <Link>Door Mats</Link>
+                  {home.flooring.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -2975,23 +2985,23 @@ function Header() {
                   }}
                 >
                   <Link className="yellow-heading">Bath</Link>
-                  <Link>Bath Towels</Link>
-                  <Link>Hand & Face Towels</Link>
-                  <Link>Beach Towels</Link>
-                  <Link>Towels Set</Link>
-                  <Link>Bath Rugs</Link>
-                  <Link>Bath Robes</Link>
-                  <Link>Bathroom Accessories</Link>
-                  <Link>Shower Curtains</Link>
+                  {home.bath.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="yellow-heading">Lamps & Lighting</Link>
-                  <Link>Floor Lamps</Link>
-                  <Link>Ceiling Lamps</Link>
-                  <Link>Table Lamps</Link>
-                  <Link>Wall Lamps</Link>
-                  <Link>Outdoor Lamps</Link>
-                  <Link>String Lights</Link>
+                  {home.lamps.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -3002,17 +3012,13 @@ function Header() {
                   }}
                 >
                   <Link className="yellow-heading">Home Décor</Link>
-                  <Link>Plants & Planters</Link>
-                  <Link>Aromas & Candles</Link>
-                  <Link>Clocks</Link>
-                  <Link>Mirrors</Link>
-                  <Link>Wall Décor</Link>
-                  <Link>Festive Decor</Link>
-                  <Link>Pooja Essentials</Link>
-                  <Link>Wall Shelves</Link>
-                  <Link>Fountains</Link>
-                  <Link>Showpieces & Vases</Link>
-                  <Link>Ottoman</Link>
+                  {home.homeDecor.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="yellow-heading">
                     Cushions & Cushion Covers
@@ -3029,20 +3035,22 @@ function Header() {
                 >
                   <Link className="yellow-heading">Home Gift Sets</Link>
                   <Link className="yellow-heading">Kitchen & Table</Link>
-                  <Link>Table Runners</Link>
-                  <Link>Dinnerware & Serveware</Link>
-                  <Link>Cups and Mugs</Link>
-                  <Link>Bakeware & Cookware</Link>
-                  <Link>Kitchen Storage & Tools</Link>
-                  <Link>Bar & Drinkware</Link>
-                  <Link>Table Covers & Furnishings</Link>
+                  {home.kitchen.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="yellow-heading">Storage</Link>
-                  <Link>Bins</Link>
-                  <Link>Hangers</Link>
-                  <Link>Organisers</Link>
-                  <Link>Hooks & Holders</Link>
-                  <Link>Laundry Bags</Link>
+                  {home.storage.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -3053,22 +3061,13 @@ function Header() {
                   }}
                 >
                   <Link className="yellow-heading">Brands</Link>
-                  <Link>H&M</Link>
-                  <Link>Marks & Spencer</Link>
-                  <Link>Home Centre</Link>
-                  <Link>Spaces</Link>
-                  <Link>D'Decor</Link>
-                  <Link>Story@Home</Link>
-                  <Link>Pure Home & Living</Link>
-                  <Link>Swayam</Link>
-                  <Link>Raymond Home</Link>
-                  <Link>Maspar</Link>
-                  <Link>My Trident</Link>
-                  <Link>Cortina</Link>
-                  <Link>Random</Link>
-                  <Link>Ellementry</Link>
-                  <Link>ROMEE</Link>
-                  <Link>SEJ by Nisha Gupta</Link>
+                  {home.brands.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
               </Box>
             )}
@@ -3097,18 +3096,13 @@ function Header() {
                   }}
                 >
                   <Link className="green-heading">Makeup</Link>
-                  <Link>Lipstick</Link>
-                  <Link>Lip Gloss</Link>
-                  <Link>Lip Liner</Link>
-                  <Link>Mascara</Link>
-                  <Link>Eyeliner</Link>
-                  <Link>Kajal</Link>
-                  <Link>Eyeshadow</Link>
-                  <Link>Foundation</Link>
-                  <Link>Primer</Link>
-                  <Link>Concealer</Link>
-                  <Link>Compact</Link>
-                  <Link>Nail Polish</Link>
+                  {beauty.makeup.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -3119,18 +3113,13 @@ function Header() {
                   }}
                 >
                   <Link className="green-heading">Skincare, Bath & Body</Link>
-                  <Link>Face Moisturiser</Link>
-                  <Link>Cleanser</Link>
-                  <Link>Masks & Peel</Link>
-                  <Link>Sunscreen</Link>
-                  <Link>Serum</Link>
-                  <Link>Face Wash</Link>
-                  <Link>Eye Cream</Link>
-                  <Link>Lip Balm</Link>
-                  <Link>Body Lotion</Link>
-                  <Link>Body Wash</Link>
-                  <Link>Body Scrub</Link>
-                  <Link>Hand Cream</Link>
+                  {beauty.skincare.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="green-heading">Baby Care</Link>
@@ -3145,19 +3134,22 @@ function Header() {
                   }}
                 >
                   <Link className="green-heading">Haircare</Link>
-                  <Link>Shampoo</Link>
-                  <Link>Conditioner</Link>
-                  <Link>Hair Cream</Link>
-                  <Link>Hair Oil</Link>
-                  <Link>Hair Gel</Link>
-                  <Link>Hair Color</Link>
-                  <Link>Hair Serum</Link>
-                  <Link>Hair Accessory</Link>
+                  {beauty.hairCare.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="green-heading">Fragrances</Link>
-                  <Link>Perfume</Link>
-                  <Link>Deodorant</Link>
-                  <Link>Body Mist</Link>
+                  {beauty.fragrence.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
                 <Box
                   sx={{
@@ -3168,21 +3160,34 @@ function Header() {
                   }}
                 >
                   <Link className="green-heading">Appliances</Link>
-                  <Link>Hair Straightener</Link>
-                  <Link>Hair Dryer</Link>
-                  <Link>Epilator</Link>
+                  {beauty.appliances.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
 
                   <Link className="green-heading">Men's Grooming</Link>
-                  <Link>Trimmers</Link>
-                  <Link>Beard Oil</Link>
-                  <Link>Hair Wax</Link>
+                  {beauty.mensGrooming.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="green-heading">
                     Beauty Gift & Makeup Set
                   </Link>
-                  <Link>Beauty Gift</Link>
-                  <Link>Makeup Kit</Link>
+                  {beauty.beautyGift.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                   <span className="black-horizantal-line"></span>
                   <Link className="green-heading">Premium Beauty</Link>
                   <Link className="green-heading">Wellness & Hygiene</Link>
@@ -3197,21 +3202,13 @@ function Header() {
                 >
                   <Link className="green-heading">Top Brands</Link>
 
-                  <Link>Lakme</Link>
-                  <Link>Maybelline</Link>
-                  <Link>Loreal</Link>
-                  <Link>Philips</Link>
-                  <Link>Bath & Body Works</Link>
-                  <Link>The Body Shop</Link>
-                  <Link>Biotique</Link>
-                  <Link>Mamaearth</Link>
-                  <Link>Mcaffeine</Link>
-                  <Link>Nivea</Link>
-                  <Link>Lotus Herbals</Link>
-                  <Link>Loreal Professionnel</Link>
-                  <Link>KAMA AYURVEDA</Link>
-                  <Link>M.A.C</Link>
-                  <Link>Forest Essentials</Link>
+                  {beauty.topBrands.map((link, index) => {
+                    return (
+                      <Link key={index} to={link[0]}>
+                        {link[1]}
+                      </Link>
+                    );
+                  })}
                 </Box>
               </Box>
             )}
