@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './carousel.css';
+import BrandBanner from './BrandBanner';
 
 function Carousel() {
   // State to keep track of the active slide index
@@ -68,11 +69,17 @@ function Carousel() {
           </div>
         </div>
       </div>
-      <div className='brand-banner'>
+      <BrandBanner brandList={brandList}/>
+      {/* <div className='brand-banner'>
         {brandList?.map(brands => {
+          if (brands === '/banners/myntra.png' || brands === '/banners/flipkart.png') {
+            return <img className='brand-unfit-logo' src={brands} />
+          }
+          else {
           return <img className='brand-logo' src={brands} />
+          }
         })}
-      </div>
+      </div> */}
     </div>
 
 

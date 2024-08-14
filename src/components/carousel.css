@@ -51,18 +51,43 @@
   }
 
 /* Responsive styles */
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 596px) {
   .carousel {
-    height: 150px;
+    height: 4vw;
+    width: 100%;
+  }
+  .brand-banner{
+    height: 10vw !important;
+    width: 100%;
+
+    justify-content: center !important;
+    align-items: center;
+    gap: 10px !important;
+    .brand-logo{
+      object-fit: contain;
+      height: 40px;
+      width: 40px !important;
+      
+    }
+    .brand-unfit-logo{
+      object-fit: contain;
+      width: 38px;
+      height: 38px !important;
+
+    }
   }
 }
 
 .bannerContainer{
   position: relative;
+  margin: 0;
+  gap: -4px;
+  background: #F2F1F0;
   .bannerImage{
     height: 40.978vw;
     width: 100%;
     object-fit: fill;
+
     /* @media (max-width: 595px) {
       height: 166.387vw;
       width: 100%;
@@ -153,15 +178,24 @@
     }
   }
   .brand-banner{
-    height: 100%;
+    height: 10vw;
+    width: 100%;
     background: #E6C744;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    box-sizing: border-box;
+    margin-top: -4px;
     .brand-logo{
-
+      height: 80%;
+      object-fit: contain;
       border-radius: 100%;
+    }
+    .brand-unfit-logo{
+      height: 100%;
+
+      object-fit: contain;
     }
   }
 }
