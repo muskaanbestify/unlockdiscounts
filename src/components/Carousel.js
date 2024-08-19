@@ -30,7 +30,7 @@ function Carousel() {
     });
   }, [slides]);
 
-  // Use useEffect to automatically transition to the next slide every 2 seconds
+  // Use useEffect to automatically transition to the next slide every 2 seconds.
   useEffect(() => {
     const interval = setInterval(nextSlide, 2000);
     return () => clearInterval(interval);
