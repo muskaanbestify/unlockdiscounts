@@ -113,9 +113,10 @@
       height: 5.132vw;
       flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
+      gap: 30px;
       margin-bottom: 8.044vw;
       @media (max-width: 768px) {
+        gap: 10px;
         max-width: 100%;
         justify-content: center; /* Center items horizontally */
         text-align: center; /* Center text */
