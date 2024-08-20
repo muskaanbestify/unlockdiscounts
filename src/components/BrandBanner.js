@@ -4,11 +4,11 @@ import './BrandBanner.css';
 function BrandBanner() {
   
   const brandList = [
-    '/banners/amazon.png',
-    '/banners/myntra.png',
-    '/banners/meesho.png',
-    '/banners/flipkart.png',
-    '/banners/ajio.png',
+    '/Brandbanner/amazon.png',
+    '/Brandbanner/myntra.png',
+    '/Brandbanner/meesho.png',
+    '/Brandbanner/flipkart.png',
+    '/Brandbanner/ajio.png',
   ];
 
     //   console.log('brandlist:', brandList);
