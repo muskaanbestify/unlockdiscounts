@@ -23,10 +23,13 @@ function Carousel() {
       <img className="bannerImage" src="/banners/staticBanner.png" />
       <div className="contentContainer">
         <h1>FIND DEALS THAT FITS IN YOUR BUDGET </h1>
-        <p>
+        <p className="desktop_para">
           Browse through our diverse range of meticulously crafted garments,
           designed to bring out your individuality and cater to your sense of
           style.
+        </p>
+        <p className="mobile_para">
+          Unlock unbeatable savings - explore the best deal here!
         </p>
 
         <button className="shopNowCTA">Shop Now</button>
@@ -92,3 +95,4 @@ function Carousel() {
 }
 
 export default Carousel;
+
