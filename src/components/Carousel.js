@@ -22,7 +22,7 @@ function Carousel() {
     <div className="bannerContainer">
       <img className="bannerImage" src="/banners/staticBanner.png" />
       <div className="contentContainer">
-        <h1>FIND DEALS THAT FITS IN YOUR BUDGET </h1>
+        <h1 className="mainHeading">FIND DEALS THAT FITS IN YOUR BUDGET </h1>
         <p className="desktop_para">
           Browse through our diverse range of meticulously crafted garments,
           designed to bring out your individuality and cater to your sense of
