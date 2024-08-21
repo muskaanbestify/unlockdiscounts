@@ -8,7 +8,7 @@ const FestivalSale = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 800,
     slidesToShow: 1.5,
     slidesToScroll: 1,
     autoplay: true,
@@ -20,9 +20,9 @@ const FestivalSale = () => {
   };
 
   const images = [
-    { id: 1, src: '/AutoSlideCarousel/FreedomDay,png', alt: 'FreedomeDay' },
+    { id: 1, src: '/AutoSlideCarousel/FreedomDay.png', alt: 'FreedomDay' },
     { id: 2, src: '/AutoSlideCarousel/RakshaBandhan.png', alt: 'RakshaBandhan' },
-    { id: 3, src: '/AutoSlideCarousel/FrienshipDay.png', alt: 'FrienshipDay' },
+    { id: 3, src: '/AutoSlideCarousel/FriendshipDay.png', alt: 'FrienshipDay' },
   ];
 
   return (
