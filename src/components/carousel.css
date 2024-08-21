@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Khand:wght@300&family=Poppins:ital,wght@1,600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
 .bannerContainer {
   width: 100vw;
   position: relative;
@@ -18,10 +18,16 @@
     top: 0;
     left: 0;
     margin: 3.398vw 0 0.555vw 7.49vw;
-    max-width: 40.222vw;
+    max-width: 48.222vw;
     max-height: 17.892vw;
     .mobile_para {
       display: none;
+    }
+    .mainHeading {
+      font-family: "Notable", sans-serif;
+    }
+    .desktop_para {
+      width: 80%;
     }
     @media (max-width: 768px) {
       .mobile_para {
