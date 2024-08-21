@@ -15,7 +15,7 @@ function BrandBanner() {
     return (
       <div className='brand-banner'>
       {brandList?.map(brands => {
-        if (brands === '/banners/myntra.png' || brands === '/banners/flipkart.png') {
+        if (brands === '/Brandbanner/myntra.png' || brands === '/Brandbanner/flipkart.png') {
           return <img className='brand-unfit-logo' src={brands} />
         }
         else {
