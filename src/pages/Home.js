@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import Carousel from '../components/Carousel';
+import ReviewSection from './ReviewSection';
+
 
 function Home() {
     return (
@@ -90,6 +92,9 @@ function Home() {
                             <div className="description">Saving Applications</div>
                         </Link>
                         <p>Find the perfect saving application to help you manage your finances, save money effortlessly, and achieve your financial goals.</p>
+                    </div>
+                    <div>
+                        <ReviewSection/>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ import PhonesAndAccessories from './pages/PhonesAndAccessories';
 import Appliances from './pages/Appliances';
 import Banking from './pages/Banking'; 
 import SearchResults from './pages/SearchResult';
+import ReviewSection from './pages/ReviewSection';
 
 const AppRoutes = () => (
   <Routes>
@@ -28,6 +29,7 @@ const AppRoutes = () => (
     <Route path="/electronics/phones-accessories" element={<PhonesAndAccessories />} />
     <Route path="/electronics/appliances" element={<Appliances />} />
     <Route path="/banking" element={<Banking />} /> 
+    <Route path="/" element={<ReviewSection />} />
   </Routes>
 );
 
