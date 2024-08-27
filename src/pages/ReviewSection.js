@@ -7,32 +7,32 @@ function ReviewSection() {
 
     const reviews = [
         {
-            stars: "⭐⭐⭐⭐⭐",
+            stars: "★★★★★",
             name: "Alex K.",
             text: "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."
         },
         {
-            stars: "⭐⭐⭐⭐⭐",
+            stars: "★★★",
             name: "Emma L.",
             text: "Shop.co has revolutionized my shopping experience. The quality and variety of clothing are unmatched. Highly recommended!"
         },
         {
-            stars: "⭐⭐⭐⭐⭐",
+            stars: "★★★★★",
             name: "John D.",
             text: "The user-friendly interface and diverse collection at Shop.co make it my go-to destination for fashion. Excellent service!"
         },
         {
-            stars: "⭐⭐⭐⭐⭐",
+            stars: "★★★★",
             name: "Linda M.",
             text: "I love the curated selections on Shop.co. It's easy to find trendy and high-quality clothes without any hassle."
         },
         {
-            stars: "⭐⭐⭐⭐⭐",
+            stars: "★★★★★",
             name: "Michael T.",
             text: "The shopping experience at Shop.co is exceptional. Great clothes, easy navigation, and prompt customer service."
         },
         {
-            stars: "⭐⭐⭐⭐⭐",
+            stars: "★★★★",
             name: "Sarah W.",
             text: "Shop.co has a fantastic collection of clothes that cater to all styles. The site is easy to use, and the delivery is fast."
         }
