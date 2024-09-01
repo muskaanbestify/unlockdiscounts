@@ -44,6 +44,25 @@ function Header() {
     setMainFashionDropdown(null);
     setSubFashionDropdown(null);
   }
+
+  // extracting the kidswear products
+  const fetchKidsWear = async (category, sub_category) => {
+    console.log("Fetching kidswear products", category, sub_category);
+    try {
+      const res = await axios.get(
+        `http://localhost:8080/api/kidswear?page=1&limit=25&category=${category}&sub_category=${sub_category}`
+      );
+
+      console.log(
+        "Kidswear products fetched successfully => ",
+        res.data.kidswear
+      );
+      return res;
+    } catch {
+      console.log("Failed to fetch kidswear products");
+    }
+  };
+
   // styles for the drop down container
   const dropDownContainerStyles = {
     position: "absolute",
@@ -1456,6 +1475,9 @@ function Header() {
                                 className="mobile-sub-link-child "
                                 key={index}
                                 to={link[0]}
+                                onClick={() => {
+                                  fetchKidsWear("Boys Clothing", link[1]);
+                                }}
                               >
                                 {link[1]}
                               </Link>
@@ -1497,6 +1519,9 @@ function Header() {
                                 className="mobile-sub-link-child "
                                 key={index}
                                 to={link[0]}
+                                onClick={() => {
+                                  fetchKidsWear("Girls Clothing", link[1]);
+                                }}
                               >
                                 {link[1]}
                               </Link>
@@ -2831,7 +2856,13 @@ function Header() {
                   <Link className="orange-heading">Boys Clothing</Link>
                   {kids.boysClothing.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          fetchKidsWear("Boys Clothing", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
@@ -2848,7 +2879,13 @@ function Header() {
                   <Link className="orange-heading">Girls Clothing</Link>
                   {kids.girlsClothing.map((link, index) => {
                     return (
-                      <Link key={index} to={link[0]}>
+                      <Link
+                        key={index}
+                        to={link[0]}
+                        onClick={() => {
+                          fetchKidsWear("Girls Clothing", link[1]);
+                        }}
+                      >
                         {link[1]}
                       </Link>
                     );
