@@ -1,0 +1,93 @@
+/* banking component css */
+
+.banking-component-container {
+  background: linear-gradient(to top, #aaecf8 0%, #ffffff 100%); /* Peach gradient */
+  padding: 15px 5%;
+  position: relative;
+}
+
+.banking-component-container h1 {
+  font-family: "inter";
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banking-component-container .cards {
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.banking-card {
+  height: 70%;
+  width: calc((100% / 3) - 1.2rem);
+}
+
+.banking-card .card-title {
+  font-family: "inter";
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0;
+}
+
+.banking-card .card-description {
+  font-family: "inter";
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.banking-card img {
+  width: 100%; /* Adjust to fit the width of the card */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 10px;
+  display: block;
+}
+
+.no-underline {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: black;
+  width: 100%;
+}
+
+.no-underline .card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .banking-component-container {
+    background: linear-gradient(to top, #fab37d 0%, #ffffff 100%);
+  }
+  .banking-component-container h1 {
+    font-size: 20px;
+  }
+  .banking-component-container .cards {
+    gap: 20px;
+  }
+  .banking-card .card-description {
+    font-size: 12px;
+  }
+  .banking-card .card-title h2 {
+    margin: 0; /* Ensure no space around h2 */
+    font-size: 13px;
+  }
+  .banking-card img {
+    height: 100px;
+  }
+}
