@@ -63,6 +63,24 @@ function Header() {
     }
   };
 
+  const fetchMenWear = async (category, sub_category) =>{
+    console.log("Fetching Men's Wear Products", category, sub_category);
+    try {
+      const res = await axios.get(
+        `http://localhost:8080/api/menswear?page=1&limit=25&category=${category}&sub_category=${sub_category}`
+      );
+
+      console.log(
+        "Menswear products fetched successfully => ",
+        res.data.kidswear
+      );
+      return res;
+    } catch {
+      console.log("Failed to fetch menswear products");
+    }
+  };
+
+
   // styles for the drop down container
   const dropDownContainerStyles = {
     position: "absolute",
