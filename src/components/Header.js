@@ -622,6 +622,8 @@ function Header() {
                   <Link
                     className="mobile-main-link"
                     onClick={handleCloseButton}
+                    key = {index}
+                    to={link[0]}
                   >
                     MEN
                   </Link>
@@ -648,6 +650,9 @@ function Header() {
                         <Link
                           className="mobile-sub-link"
                           onClick={handleCloseButton}
+                          onClick={()=>{
+                            fetchMensWear("topWear", "men-topWear");
+                          }}
                         >
                           Topwear
                         </Link>
