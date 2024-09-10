@@ -1,0 +1,64 @@
+.latest-carousel-container {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.latest-carousel-heading {
+  text-align:left;
+  font-size: 24px;
+  font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
+  margin-bottom: 30px;
+  margin-top: 40px;
+  letter-spacing: 10px;
+}
+
+.latest-carousel-slide {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.latest-carousel-image {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.latest-carousel-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.latest-carousel-promo {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+  .latest-carousel-image {
+      max-height: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .latest-carousel-image {
+      max-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-carousel-image {
+      max-height: 160px;
+  }
+
+  .latest-carousel-heading {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .latest-carousel-image {
+      height: 150px;
+  }
+}
