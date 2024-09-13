@@ -1,19 +1,25 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import React ,{ Component } from 'react';
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
+import MensWear from './MyProjects/MensWear';
+import WomensWear from './MyProjects/WomensWear';
+import KidsWear from './MyProjects/KidsWear';
+import Header from './MyComponents/Header';
 
-const AppRoutes = lazy(() => import('./routes')); 
+function App() {
+  return (
+    <Router>
+      <Routes>
+       
+        <Route path="/" element={<Header />} />
+        <Route path="/menswear" element={<MensWear />} />
+        <Route path="/womenswear" element={<WomensWear />} />
+        <Route path="/kidswear" element={<KidsWear />} />
 
-const App = () => (
-  <Router>
-    <Header />
-    <Suspense fallback={<div>Loading...</div>}>
-      <AppRoutes />
-    </Suspense>
-    <Footer />
-  </Router>
-);
+      </Routes>
+    </Router>
+  );
+}
 
-export default React.memo(App); 
+export default App;
 
+   
