@@ -1,15 +1,7 @@
 .container {
   display: flex;
-   padding: 20px;
+  padding: 20px;
 }
-
-/* Filter section */
-.filter-section {
-  flex: 1.5; 
-  min-height: 300px; 
-  
-}
-
 
 .product-grid {
     width: 75%;
@@ -33,8 +25,8 @@
   }
   .product-image {
     width: 100%;
-    max-width: 250px;
     height: 300px;
+    object-fit: cover; 
     margin-bottom: 1px;
   }
   

@@ -46,7 +46,7 @@ const ProductGallery = ({ apiEndpoint, category }) => {
     <div className="container">
     <div className="filter-section">
       {/*  add filter content */}
-      
+    
      </div>
     
   <div className="product-grid">
