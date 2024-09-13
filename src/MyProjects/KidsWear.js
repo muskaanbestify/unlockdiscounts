@@ -17,7 +17,7 @@ const KidsWear = () => {
         
         setProducts(data.kidswear);    
       } catch (error) {
-        setError('Unable to fetch data. Please check your internet connection');
+        setError('Unable to fetch data  Please check your internet connection');
     } finally {
         setLoading(false);        
       }

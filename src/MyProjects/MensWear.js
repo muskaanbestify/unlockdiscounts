@@ -18,7 +18,7 @@ const MensWear = () => {
         
         setProducts(data.mensWear);
     } catch (error) {
-        setError('Unable to fetch data. Please check your internet connection');  
+        setError('Unable to fetch data  Please check your internet connection');  
       } finally {
         setLoading(false);        
       }

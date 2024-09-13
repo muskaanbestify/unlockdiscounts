@@ -24,7 +24,7 @@ const Header = () => {
         <img width={419} src="\Images\womenswearbanner.avif" alt="Women's Wear" className="category-image" />
       </Link>
       <h2  style={{ marginTop: '10px', textAlign: 'left' }} >Women's Wear</h2>
-      <p style={{ textAlign: 'left' }} >Explore the latest trends in women's fashion and find your perfect outfit.</p>
+      <p style={{ textAlign: 'left' }} >Explore the latest trend in women's fashion and find your perfect outfit.</p>
       </li>
       <li className="nav-item"style={{ textAlign: 'center',  }} >
       <Link to="/kidswear">
