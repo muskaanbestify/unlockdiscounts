@@ -49,7 +49,8 @@ function Header() {
   const connectwomensdata = async(category,sub_category) => { 
     console.log("Connected Womenswear data", category,sub_category);
     try{
-      const response = await axios.get(`http://localhost:8080/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`);
+      ////http://localhost:8080/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`
+      const response = await axios.get(`https://product-gallery.onrender.com/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`);
       const reslt = response.data;
       console.log("Womenswear data connected Successfully:",reslt);
       return reslt;
