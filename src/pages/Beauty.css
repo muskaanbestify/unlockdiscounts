@@ -1,0 +1,135 @@
+
+.row1{
+    display: flex;
+    padding-left: 50px;
+}
+.row2{
+    display: flex;
+    padding-left: 50px;
+}
+.row3{
+    display: flex;
+    padding-left: 50px;
+}
+
+
+
+h3{
+font-family: Notable;
+font-size: 40px;
+font-weight: 700;
+line-height: 44px;
+text-align: left;
+padding-left: 6rem;
+}
+
+.beauty-part{
+    position: absolute;
+    right: 0%;
+}
+
+img{
+    height: 200px;
+    width: 250px;
+    object-fit:contain;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+h4{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+    margin-top: 5px;
+    padding-right: 82px;
+      }
+
+      p{
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+        text-align: center;
+        color: #828282;
+        margin-top: -25px;
+          }
+
+          .sort-dropdown select {
+            border: transparent;
+            font-weight: bold;
+            font-size: 15px;
+          }
+          .sort-dropdown select:hover{
+            border: transparent;
+          }
+
+          .beauty-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+          }
+
+          .product-info {
+            display: flex;
+            align-items: rigth;
+            font-size: 15px;
+            font-weight: lighter;
+          }
+
+          .product-info span{
+            padding-right: 25px;
+          }
+
+
+
+          .pagination {
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            text-align: center;
+            justify-content: space-between;
+            display: flex;
+          }
+
+          
+          
+          .pagination .prev-button,
+          .pagination .next-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+          }
+          .pagination .page-numbers span{
+            padding: 5px;
+            font-size: 1rem;
+            margin: 0 10px;
+          }
+
+          .pagination .prev-button{
+            background-color: #fff;
+            border: 2px solid grey;
+            color: #000000;
+          }
+
+          .pagination .next-button{
+            background-color: #fff;
+            border: 2px solid grey;
+            color: #000000;
+          }
+          
+          .pagination .prev-button:hover,
+          .pagination .next-button:hover {
+            background-color: #555;
+          }
+
+          
+
+          
