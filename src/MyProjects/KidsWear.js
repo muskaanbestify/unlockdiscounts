@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductGallery from './ProductGallery';
+import FashionLayout from './FashionLayout'; 
 
    const KidsWear = () => {
     
@@ -7,7 +7,7 @@ import ProductGallery from './ProductGallery';
       <div>
         <h1 style={{ textAlign: 'left', paddingLeft: '200px', marginBottom:'2px' }} >Kids</h1>
         
-        <ProductGallery apiEndpoint="https://product-gallery.onrender.com/api/kidswear" category="kidswear" />
+        <FashionLayout apiEndpoint="https://product-gallery.onrender.com/api/kidswear" category="kidswear" />
 
       </div>
     );
