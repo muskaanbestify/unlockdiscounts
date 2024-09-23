@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Notable&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+.thankyou-main {
+  height: 500px;
+  margin-top: 10%;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  background-color: transparent;
+}
+
+.thankyou-main > h1 {
+  font-size: 3rem;
+  color: #333;
+  font-family: "Caveat", cursive;
+}
+
+.thankyou-main > p {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.go-back-btn,
+.whatsapp-btn {
+  margin: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.1s;
+  color: #000000;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #000000;
+}
+
+.go-back-btn:hover,
+.whatsapp-btn:hover {
+  border-bottom: 2px solid #000000;
+}
