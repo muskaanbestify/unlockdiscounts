@@ -32,9 +32,12 @@ const Certificate = () => {
         e.preventDefault();
         setLoading(true);
         setError("");
+        // Get the trimmed values for comparison 
+        const serialNumber = state.serialNumber.trim();
+        const internName = state.internName.trim();
 
         // Check if fields are empty
-        if (!state.serialNumber || !state.internName) {
+        if (!serialNumber || !internName) {
             setError("Please fill in both the Serial Number and Intern Name.");
             setLoading(false);
             return;
@@ -42,8 +45,8 @@ const Certificate = () => {
 
         // Log the request body for debugging
         const requestBody = {
-            intern_name: state.internName,
-            certificate_code: state.serialNumber,
+            intern_name: internName,
+            certificate_code: serialNumber,
         };
         console.log("Submitting:", requestBody);
 
@@ -61,28 +64,32 @@ const Certificate = () => {
             if (response.ok) {
                 // Update the user context with form data
                 setUser({
-                    serialNumber: state.serialNumber,
-                    internName: state.internName,
+                    serialNumber: serialNumber,
+                    internName: internName,
                 });
 
                 // Redirect to the verification page
                 navigate("/verification");
             } else {
-                setError(data.message || "An error occurred");
+                // Log the error response from the server
+                console.log("Server Error:", data);
+                setError(data.message || "An error occurred during verification.");
             }
         } catch (error) {
+            // Network error or request failure
+            console.error("Fetch error:", error); // More detailed error logging
             setError("Failed to verify certificate. Please try again.");
         } finally {
             setLoading(false);
         }
-    };
+    }
 
     const handleChange = (e) => {
         const { id, value } = e.target;
         setError(""); // Clear the error when user types again
         setState((prevState) => ({
             ...prevState,
-            [id]: value.trim(),
+            [id]: value, //removed trim() from here
         }));
     };
 
