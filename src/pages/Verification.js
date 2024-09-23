@@ -1,40 +1,78 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from '@mui/styles';
-import Card from '@mui/material/Card';
+import { makeStyles } from "@mui/styles";
 import { UserState } from "../contexts/VerifyContext";
 
 const useStyles = makeStyles({
-    card: {
-        padding: "40px",
+    outerWrapper: {
+        backgroundColor: "#fff",
+        padding: "50px 0",
+        display: "flex",
+        justifyContent: "center",
+    },
+    innerWrapper: {
+        backgroundColor: "#1e1e1e",
+        borderRadius: "0px 40px 0px 40px",
+        padding: "50px 130px",
         maxWidth: "800px",
-        margin: "0 auto",
-        textAlign: "center",
-        border: "1px solid #ddd",
-        boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-        fontFamily: "'Helvetica Neue', Arial, sans-serif",
+        boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
         position: "relative",
+        textAlign: "center",
+        color: "#fff",
     },
     title: {
-        fontSize: "30px",
+        fontSize: "28px",
         fontWeight: "bold",
-        margin: "20px 0",
+        color: "#fff",
+        marginBottom: "30px",
+        position: "relative",
+        display: "inline-block",
+        "&::before, &::after": {
+            content: '""',
+            width: "80px",
+            height: "2px",
+            backgroundColor: "#fff",
+            position: "absolute",
+            top: "50%",
+        },
+        "&::before": {
+            left: "-90px",
+        },
+        "&::after": {
+            right: "-90px",
+        },
+    },
+    certificateBox: {
+        backgroundColor: "#fff",
+        padding: "20px 130px",
+        borderRadius: "10px",
+        color: "#000", //
+        marginBottom: "20px",
+        textAlign: "center",
     },
     name: {
-        fontSize: "24px",
+        fontSize: "22px",
         fontWeight: "bold",
-        marginBottom: "10px",
+        marginBottom: "20px",
     },
     date: {
         fontSize: "16px",
         color: "#666",
+        margin: "10px 0",
+        textAlign: "center",
     },
-    info: {
-        fontSize: "16px",
-        color: "#666",
+    button: {
         marginTop: "20px",
-    },
-    verified: {
-        marginTop: "7px",
+        padding: "12px 20px",
+        backgroundColor: "#2e7d32",
+        color: "#fff",
+        borderRadius: "10px",
+        border: "none",
+        fontSize: "18px",
+        fontWeight: "bold",
+        cursor: "pointer",
+        "&:hover": {
+            backgroundColor: "#1b5e20",
+        },
     },
 });
 
@@ -47,20 +85,22 @@ const Verification = () => {
 
     useEffect(() => {
         const fetchCertificate = async () => {
-            console.log('Fetching certificate for:', user.serialNumber);
+            console.log("Fetching certificate for:", user.serialNumber);
 
             try {
-                const response = await fetch(`https://products2-tt3o.onrender.com/api/certificate-verification/${user.serialNumber}`);
+                const response = await fetch(
+                    `https://products2-tt3o.onrender.com/api/certificate-verification/${user.serialNumber}`
+                );
                 const data = await response.json();
 
                 if (response.ok) {
                     setCertificate(data);
-                    console.log("Certificate data:", data); // Log the fetched certificate data
+                    console.log("Certificate data:", data);
                 } else {
                     setError(data.message || "Failed to fetch certificate");
                 }
             } catch (err) {
-                console.error("Fetch error:", err); // Log any errors
+                console.error("Fetch error:", err);
                 setError("Failed to fetch certificate. Please try again.");
             } finally {
                 setLoading(false);
@@ -79,20 +119,29 @@ const Verification = () => {
     if (error) return <p>{error}</p>;
 
     return (
-        <div className="container">
-            <Card className={classes.card}>
-                <h1 className={classes.title}>CERTIFICATE OF COMPLETION</h1>
-                <div className={classes.name}>{certificate?.intern_name || "Not available"}</div>
-                <div className={classes.date}>
-                    Serial number: {certificate?.certificate_code || "Not available"}
-                    <br /> Joining date: {certificate?.Joining_date || "Not available"}
-                    <br /> Last working Date: {certificate?.Last_date || "Not available"}
+        <div className={classes.outerWrapper}>
+            <div className={classes.innerWrapper}>
+                <h1 className={classes.title}>Certificate Of Completion</h1>
+                <div className={classes.certificateBox}>
+                    <div className={classes.name}>
+                        Name of the Intern:{" "}
+                        {certificate?.intern_name || "Not available"}
+                    </div>
+                    <div className={classes.date}>
+                        Joining Date:{" "}
+                        {certificate?.Joining_date || "Not available"}
+                        <br />
+                        Certificate Issued On:{" "}
+                        {certificate?.issued_date || "Not available"}
+                        <br />
+                        Serial Number:{" "}
+                        {certificate?.certificate_code || "Not available"}
+                    </div>
+                    <button className={classes.button}>
+                        Verified Successfully!
+                    </button>
                 </div>
-                <div><h3 className={classes.verified}>VERIFIED</h3></div>
-                <p className={classes.info}>
-                    Certificate issued on: {certificate?.issued_date || "Not available"} <br />
-                </p>
-            </Card>
+            </div>
         </div>
     );
 };
