@@ -1,0 +1,125 @@
+.news-letter-main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-family: pp mori;
+}
+
+.news-letter-hero {
+  width: 80%;
+  height: 130px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+.news-letter {
+  padding: 1rem 5rem 1rem 5rem;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+}
+
+.news-letter > h1 {
+  width: 40%;
+  font-size: 2.5rem;
+  color: whitesmoke;
+}
+
+.email-fields {
+  width: 40%;
+  position: relative;
+}
+
+.email-fields > input {
+  width: 94%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0 1.5rem 0 2rem;
+}
+
+.email-fields > .subs-btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin-top: 1rem;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all ease 0.5s;
+}
+.email-fields > .subs-btn:hover {
+  border: 1px solid whitesmoke;
+  background-color: #000000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.email-icon {
+  color: #a1a1a1;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 8%;
+  left: 0.5rem;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: 1px;
+  /* margin-top: 5px; */
+}
+
+@media screen and (max-width: 560px) {
+  .news-letter {
+    display: block;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+  }
+  .news-letter > h1 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .email-fields {
+    width: 80%;
+  }
+  .email-fields > input {
+    width: 100%;
+    height: 30px;
+    font-size: 0.95rem;
+  }
+  .email-fields > .subs-btn {
+    width: 100%;
+    height: 30px;
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 561px) and (max-width: 1022px) {
+  .news-letter {
+    display: block;
+    padding: 1rem 5rem 1rem 5rem;
+  }
+  .news-letter > h1 {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .email-fields {
+    width: 80%;
+  }
+  .email-fields > input,
+  .subs-btn {
+    width: 100%;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
