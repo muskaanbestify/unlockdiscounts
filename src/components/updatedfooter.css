@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Notable&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Notable&display=swap");
+.footer-main {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.footer-pro {
+  max-width: 100%;
+  border-top: 2px solid #000;
+  margin-top: 5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.company {
+  width: 25%;
+  padding: 1rem 5rem 1rem 5rem;
+}
+.company > h1 {
+  letter-spacing: 2px;
+  font-family: "Notable", sans-serif;
+}
+.company > p {
+  margin: 1.5rem 0 1.5rem 0;
+  font-weight: 200;
+  color: #747474d5;
+  font-size: clamp(0.8rem, 3vh, 1.2rem);
+  /* font-size: 1.2rem; */
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1.5px;
+}
+.social-links > a {
+  color: #000;
+  padding: 5px;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.footer-links,
+.direct-links {
+  display: flex;
+  gap: 8rem;
+  font-family: "Inter", sans-serif;
+}
+.direct-links > span > p {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.direct-links > span > li {
+  list-style: none;
+}
+.direct-links > span > li > a {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: left;
+  color: #00000099;
+  cursor: pointer;
+}
+
+@media (min-width: 1140px) and (max-width: 1400px) {
+  .footer-links,
+  .direct-links {
+    gap: 4rem;
+    margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1020px) and (max-width: 1246px) {
+  .footer-pro {
+    padding-top: 14rem;
+  }
+}
+@media (min-width: 690px) and (max-width: 1020px) {
+  .footer-pro {
+    padding-top: 14rem;
+  }
+}
+@media (min-width: 561px) and (max-width: 659px) {
+  .footer-pro {
+    padding-top: 16rem;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 1139px) {
+  .footer-pro {
+    align-items: start;
+    justify-content: space-evenly;
+  }
+  .footer-links {
+    display: block;
+  }
+  .company {
+    padding: 1rem;
+  }
+  .company > h1 {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 260px) and (max-width: 559px) {
+  .footer-pro {
+    flex-direction: column;
+  }
+  .footer-links,
+  .direct-links {
+    gap: 4rem;
+    margin-top: 1.5rem;
+  }
+  .footer-links {
+    display: block;
+  }
+  .company {
+    width: 100%;
+    padding: 1rem;
+  }
+  .company > h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .company > p {
+    font-size: 1rem;
+  }
+  .direct-links {
+    margin: 0;
+  }
+  .direct-links > span > p {
+    font-size: 1.1rem;
+  }
+  .direct-links > span > li > a {
+    font-size: 0.96rem;
+  }
+}
