@@ -15,7 +15,7 @@ import Banking from './pages/Banking';
 import SearchResults from './pages/SearchResult';
 import Certificate from "./pages/Certificate";
 import Verification from "./pages/Verification";
-import Thankyou from "./pages/ThankyouPage";
+import Thankyou from "./pages/Thankyou";
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Home />} />
