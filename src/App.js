@@ -2,7 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import UpdatedFooter from '.components/UpdatedFooter';
+import Thankyou from '.components
 const AppRoutes = lazy(() => import('./routes')); 
 
 const App = () => (
@@ -11,6 +12,8 @@ const App = () => (
     <Suspense fallback={<div>Loading...</div>}>
       <AppRoutes />
     </Suspense>
+
+  <UpdatedFooter/>
     <Footer />
   </Router>
 );
