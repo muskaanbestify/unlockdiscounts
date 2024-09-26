@@ -1,0 +1,131 @@
+/* Top section styles */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Notable', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.product-info span {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.product-info span:hover {
+    text-decoration: underline;
+}
+
+/* Product grid styling */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+    color: #828282;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-number {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.page-number button {
+    margin: 0 5px;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: white;
+    cursor: pointer;
+}
+
+.page-number button.active {
+    background-color: #000;
+    color: white;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #F0F0F0;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    background-color: #E0E0E0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .product-card {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
