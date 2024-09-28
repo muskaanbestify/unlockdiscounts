@@ -172,7 +172,13 @@ const Carousel = () => {
       <Slider {...settings}>
         {products.length > 0 &&
           products?.map((product) => (
-            <div key={product._id} className="carousel-slide">
+            <div
+              key={product._id}
+              className="carousel-slide"
+              onClick={() => {
+                window.open(product.affiliateLink, "_blank");
+              }}
+            >
               {" "}
               <img
                 src={product.image}

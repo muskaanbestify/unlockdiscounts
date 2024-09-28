@@ -171,7 +171,13 @@ const Carousel = () => {
       <h2 className="carousel-heading">HAND PICKED ITEMS AT BEST PRICE</h2>
       <Slider {...settings}>
         {products.map((product) => (
-          <div key={product._id} className="carousel-slide">
+          <div
+            key={product._id}
+            className="carousel-slide"
+            onClick={() => {
+              window.open(product.affiliateLink, "_blank");
+            }}
+          >
             {" "}
             <img
               src={product.image}
