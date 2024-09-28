@@ -35,10 +35,12 @@ function KidsWear() {
     let res;
     if (banner === "latest") {
       res = await axios.get(
-        `http://localhost:8080/api/banner/latest?${query}&mainCategory=kidswear`
+        `https://product-gallery.onrender.com/api/banner/latest?${query}&mainCategory=kidswear`
       );
     } else {
-      res = await axios.get(`http://localhost:8080/api/kidswear?${query}`);
+      res = await axios.get(
+        `https://product-gallery.onrender.com/api/kidswear?${query}`
+      );
     }
     const data = res.data;
     setPage(parseInt(pageFromQuery) || 1);

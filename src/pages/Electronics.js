@@ -28,7 +28,7 @@ function Electronics() {
     try {
       let res;
       res = await axios.get(
-        `http://localhost:8080/api/banner/latest?${query}&category=Electronics`
+        `https://product-gallery.onrender.com/api/banner/latest?${query}&category=Electronics`
       );
       const data = res.data;
       console.log("data", data);

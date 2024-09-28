@@ -50,7 +50,7 @@ function Header() {
     console.log("Connected Womenswear data", category, sub_category);
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`
+        `https://product-gallery.onrender.com/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`
       );
       const reslt = response.data;
       console.log("Womenswear data connected Successfully:", reslt);

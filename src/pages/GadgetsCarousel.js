@@ -136,7 +136,7 @@ const Carousel = () => {
   const handleFetchProducts = async (query) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/banner/bestselling-gadgets`
+        `https://product-gallery.onrender.com/api/banner/bestselling-gadgets`
       );
       const data = await response.json();
       if (data.success === true) {

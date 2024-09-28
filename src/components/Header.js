@@ -50,7 +50,7 @@ function Header() {
     console.log("Connected Womenswear data", category, sub_category);
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`
+        `https://product-gallery.onrender.com/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`
       );
       const reslt = response.data;
       console.log("Womenswear data connected Successfully:", reslt);
@@ -82,78 +82,239 @@ function Header() {
 
   //men fashion links object
   const men = {
-  topWear: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=T-Shirts", "T-Shirts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Casual Shirts", "Casual Shirts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Formal Shirts", "Formal Shirts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Sweatshirts", "Sweatshirts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Sweaters", "Sweaters"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Jackets", "Jackets"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Blazers & Coats", "Blazers & Coats"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Suits", "Suits"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Rain Jackets", "Rain Jackets"],
-  ],
-  indianFestivalWear: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Kurtas & Kurta Sets", "Kurtas & Kurta Sets"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Sherwanis", "Sherwanis"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Nehru Jackets", "Nehru Jackets"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Dhotis", "Dhotis"],
-  ],
-  bottomWear: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Jeans", "Jeans"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Casual Trousers", "Casual Trousers"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Formal Trousers", "Formal Trousers"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Shorts", "Shorts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Track Pants & Joggers", "Track Pants & Joggers"],
-  ],
-  innerWear: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Briefs & Trunks", "Briefs & Trunks"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Boxers", "Boxers"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Vests", "Vests"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Sleepwear & Loungewear", "Sleepwear & Loungewear"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Thermals", "Thermals"],
-  ],
-  footwear: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Casual Shoes", "Casual Shoes"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Sports Shoes", "Sports Shoes"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Sneakers", "Sneakers"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Formal Shoes", "Formal Shoes"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Sandals & Floaters", "Sandals & Floaters"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Flip Flops", "Flip Flops"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Socks", "Socks"],
-  ],
-  sports: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Sports Shoes", "Sports Shoes"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Sports Sandals", "Sports Sandals"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Active T-Shirts", "Active T-Shirts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Track Pants & Shorts", "Track Pants & Shorts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Track Suits", "Track Suits"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Jackets & Sweatshirts", "Jackets & Sweatshirts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Sports Accessories", "Sports Accessories"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Swimwear", "Swimwear"],
-  ],
-  gadgets: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Smart Wearables", "Smart Wearables"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Fitness Gadgets", "Fitness Gadgets"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Headphones", "Headphones"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Speakers", "Speakers"],
-  ],
-  fashionAccessories: [
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Wallets", "Wallets"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Belts", "Belts"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Perfumes & Body Mists", "Perfumes & Body Mists"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Trimmers", "Trimmers"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Deodorants", "Deodorants"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Ties, Cufflinks & Pocket Squares", "Ties, Cufflinks & Pocket Squares"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Accessory Gift Sets", "Accessory Gift Sets"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Caps & Hats", "Caps & Hats"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Mufflers, Scarves & Gloves", "Mufflers, Scarves & Gloves"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Phone Cases", "Phone Cases"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Rings & Wristwear", "Rings & Wristwear"],
-    ["/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Helmets", "Helmets"],
-  ],
-};
-
+    topWear: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=T-Shirts",
+        "T-Shirts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Casual Shirts",
+        "Casual Shirts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Formal Shirts",
+        "Formal Shirts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Sweatshirts",
+        "Sweatshirts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Sweaters",
+        "Sweaters",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Jackets",
+        "Jackets",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Blazers & Coats",
+        "Blazers & Coats",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Suits",
+        "Suits",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Top Wear&sub_category=Rain Jackets",
+        "Rain Jackets",
+      ],
+    ],
+    indianFestivalWear: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Kurtas & Kurta Sets",
+        "Kurtas & Kurta Sets",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Sherwanis",
+        "Sherwanis",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Nehru Jackets",
+        "Nehru Jackets",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Indian & Festival Wear&sub_category=Dhotis",
+        "Dhotis",
+      ],
+    ],
+    bottomWear: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Jeans",
+        "Jeans",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Casual Trousers",
+        "Casual Trousers",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Formal Trousers",
+        "Formal Trousers",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Shorts",
+        "Shorts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Bottom Wear&sub_category=Track Pants & Joggers",
+        "Track Pants & Joggers",
+      ],
+    ],
+    innerWear: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Briefs & Trunks",
+        "Briefs & Trunks",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Boxers",
+        "Boxers",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Vests",
+        "Vests",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Sleepwear & Loungewear",
+        "Sleepwear & Loungewear",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Inner Wear&sub_category=Thermals",
+        "Thermals",
+      ],
+    ],
+    footwear: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Casual Shoes",
+        "Casual Shoes",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Sports Shoes",
+        "Sports Shoes",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Sneakers",
+        "Sneakers",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Formal Shoes",
+        "Formal Shoes",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Sandals & Floaters",
+        "Sandals & Floaters",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Flip Flops",
+        "Flip Flops",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Footwear&sub_category=Socks",
+        "Socks",
+      ],
+    ],
+    sports: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Sports Shoes",
+        "Sports Shoes",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Sports Sandals",
+        "Sports Sandals",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Active T-Shirts",
+        "Active T-Shirts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Track Pants & Shorts",
+        "Track Pants & Shorts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Track Suits",
+        "Track Suits",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Jackets & Sweatshirts",
+        "Jackets & Sweatshirts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Sports Accessories",
+        "Sports Accessories",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Sports Wear&sub_category=Swimwear",
+        "Swimwear",
+      ],
+    ],
+    gadgets: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Smart Wearables",
+        "Smart Wearables",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Fitness Gadgets",
+        "Fitness Gadgets",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Headphones",
+        "Headphones",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Gadgets&sub_category=Speakers",
+        "Speakers",
+      ],
+    ],
+    fashionAccessories: [
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Wallets",
+        "Wallets",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Belts",
+        "Belts",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Perfumes & Body Mists",
+        "Perfumes & Body Mists",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Trimmers",
+        "Trimmers",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Deodorants",
+        "Deodorants",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Ties, Cufflinks & Pocket Squares",
+        "Ties, Cufflinks & Pocket Squares",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Accessory Gift Sets",
+        "Accessory Gift Sets",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Caps & Hats",
+        "Caps & Hats",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Mufflers, Scarves & Gloves",
+        "Mufflers, Scarves & Gloves",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Phone Cases",
+        "Phone Cases",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Rings & Wristwear",
+        "Rings & Wristwear",
+      ],
+      [
+        "/fashion/mens-wear?page=1&limit=21&category=Fashion Accessories&sub_category=Helmets",
+        "Helmets",
+      ],
+    ],
+  };
 
   // women fashion links object
 
@@ -649,168 +810,534 @@ function Header() {
 
   //home and living links object
   const home = {
-  bedLinen: [
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bed Runners", "Bed Runners"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Mattress Protectors", "Mattress Protectors"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bedsheets", "Bedsheets"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bedding Sets", "Bedding Sets"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Blankets, Quilts & Dohars", "Blankets, Quilts & Dohars"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Pillows & Pillow Covers", "Pillows & Pillow Covers"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bed Covers", "Bed Covers"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Diwan Sets", "Diwan Sets"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Chair Pads & Covers", "Chair Pads & Covers"],
-    ["/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Sofa Covers", "Sofa Covers"],
-  ],
-  flooring: [
-    ["/home-and-living?page=1&limit=21&category=Flooring&sub_category=Floor Runners", "Floor Runners"],
-    ["/home-and-living?page=1&limit=21&category=Flooring&sub_category=Carpets", "Carpets"],
-    ["/home-and-living?page=1&limit=21&category=Flooring&sub_category=Floor Mats & Dhurries", "Floor Mats & Dhurries"],
-    ["/home-and-living?page=1&limit=21&category=Flooring&sub_category=Door Mats", "Door Mats"],
-  ],
-  bath: [
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Bath Towels", "Bath Towels"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Hand & Face Towels", "Hand & Face Towels"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Beach Towels", "Beach Towels"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Towels Set", "Towels Set"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Bath Rugs", "Bath Rugs"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Bath Robes", "Bath Robes"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Bathroom Accessories", "Bathroom Accessories"],
-    ["/home-and-living?page=1&limit=21&category=Bath&sub_category=Shower Curtains", "Shower Curtains"],
-  ],
-  lamps: [
-    ["/home-and-living?page=1&limit=21&category=Lamps&sub_category=Floor Lamps", "Floor Lamps"],
-    ["/home-and-living?page=1&limit=21&category=Lamps&sub_category=Ceiling Lamps", "Ceiling Lamps"],
-    ["/home-and-living?page=1&limit=21&category=Lamps&sub_category=Table Lamps", "Table Lamps"],
-    ["/home-and-living?page=1&limit=21&category=Lamps&sub_category=Wall Lamps", "Wall Lamps"],
-    ["/home-and-living?page=1&limit=21&category=Lamps&sub_category=Outdoor Lamps", "Outdoor Lamps"],
-    ["/home-and-living?page=1&limit=21&category=Lamps&sub_category=String Lights", "String Lights"],
-  ],
-  homeDecor: [
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Plants & Planters", "Plants & Planters"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Aromas & Candles", "Aromas & Candles"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Clocks", "Clocks"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Mirrors", "Mirrors"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Wall Décor", "Wall Décor"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Festive Decor", "Festive Decor"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Pooja Essentials", "Pooja Essentials"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Wall Shelves", "Wall Shelves"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Fountains", "Fountains"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Showpieces & Vases", "Showpieces & Vases"],
-    ["/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Ottoman", "Ottoman"],
-  ],
-  kitchen: [
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Table Runners", "Table Runners"],
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Dinnerware & Serveware", "Dinnerware & Serveware"],
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Cups and Mugs", "Cups and Mugs"],
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Bakeware & Cookware", "Bakeware & Cookware"],
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Kitchen Storage & Tools", "Kitchen Storage & Tools"],
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Bar & Drinkware", "Bar & Drinkware"],
-    ["/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Table Covers & Furnishings", "Table Covers & Furnishings"],
-  ],
-  storage: [
-    ["/home-and-living?page=1&limit=21&category=Storage&sub_category=Bins", "Bins"],
-    ["/home-and-living?page=1&limit=21&category=Storage&sub_category=Hangers", "Hangers"],
-    ["/home-and-living?page=1&limit=21&category=Storage&sub_category=Organisers", "Organisers"],
-    ["/home-and-living?page=1&limit=21&category=Storage&sub_category=Hooks & Holders", "Hooks & Holders"],
-    ["/home-and-living?page=1&limit=21&category=Storage&sub_category=Laundry Bags", "Laundry Bags"],
-  ],
-  brands: [
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=H&M", "H&M"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Marks & Spencer", "Marks & Spencer"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Home Centre", "Home Centre"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Spaces", "Spaces"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=D'Decor", "D'Decor"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Story@Home", "Story@Home"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Pure Home & Living", "Pure Home & Living"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Swayam", "Swayam"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Raymond Home", "Raymond Home"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Maspar", "Maspar"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=My Trident", "My Trident"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Cortina", "Cortina"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Random", "Random"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=Ellementry", "Ellementry"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=ROMEE", "ROMEE"],
-    ["/home-and-living?page=1&limit=21&category=Brands&sub_category=SEJ by Nisha Gupta", "SEJ by Nisha Gupta"],
-  ],
-};
+    bedLinen: [
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bed Runners",
+        "Bed Runners",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Mattress Protectors",
+        "Mattress Protectors",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bedsheets",
+        "Bedsheets",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bedding Sets",
+        "Bedding Sets",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Blankets, Quilts & Dohars",
+        "Blankets, Quilts & Dohars",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Pillows & Pillow Covers",
+        "Pillows & Pillow Covers",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Bed Covers",
+        "Bed Covers",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Diwan Sets",
+        "Diwan Sets",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Chair Pads & Covers",
+        "Chair Pads & Covers",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bed Linen&sub_category=Sofa Covers",
+        "Sofa Covers",
+      ],
+    ],
+    flooring: [
+      [
+        "/home-and-living?page=1&limit=21&category=Flooring&sub_category=Floor Runners",
+        "Floor Runners",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Flooring&sub_category=Carpets",
+        "Carpets",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Flooring&sub_category=Floor Mats & Dhurries",
+        "Floor Mats & Dhurries",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Flooring&sub_category=Door Mats",
+        "Door Mats",
+      ],
+    ],
+    bath: [
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Bath Towels",
+        "Bath Towels",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Hand & Face Towels",
+        "Hand & Face Towels",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Beach Towels",
+        "Beach Towels",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Towels Set",
+        "Towels Set",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Bath Rugs",
+        "Bath Rugs",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Bath Robes",
+        "Bath Robes",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Bathroom Accessories",
+        "Bathroom Accessories",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Bath&sub_category=Shower Curtains",
+        "Shower Curtains",
+      ],
+    ],
+    lamps: [
+      [
+        "/home-and-living?page=1&limit=21&category=Lamps&sub_category=Floor Lamps",
+        "Floor Lamps",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Lamps&sub_category=Ceiling Lamps",
+        "Ceiling Lamps",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Lamps&sub_category=Table Lamps",
+        "Table Lamps",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Lamps&sub_category=Wall Lamps",
+        "Wall Lamps",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Lamps&sub_category=Outdoor Lamps",
+        "Outdoor Lamps",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Lamps&sub_category=String Lights",
+        "String Lights",
+      ],
+    ],
+    homeDecor: [
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Plants & Planters",
+        "Plants & Planters",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Aromas & Candles",
+        "Aromas & Candles",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Clocks",
+        "Clocks",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Mirrors",
+        "Mirrors",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Wall Décor",
+        "Wall Décor",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Festive Decor",
+        "Festive Decor",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Pooja Essentials",
+        "Pooja Essentials",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Wall Shelves",
+        "Wall Shelves",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Fountains",
+        "Fountains",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Showpieces & Vases",
+        "Showpieces & Vases",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Home Decor&sub_category=Ottoman",
+        "Ottoman",
+      ],
+    ],
+    kitchen: [
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Table Runners",
+        "Table Runners",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Dinnerware & Serveware",
+        "Dinnerware & Serveware",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Cups and Mugs",
+        "Cups and Mugs",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Bakeware & Cookware",
+        "Bakeware & Cookware",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Kitchen Storage & Tools",
+        "Kitchen Storage & Tools",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Bar & Drinkware",
+        "Bar & Drinkware",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Kitchen&sub_category=Table Covers & Furnishings",
+        "Table Covers & Furnishings",
+      ],
+    ],
+    storage: [
+      [
+        "/home-and-living?page=1&limit=21&category=Storage&sub_category=Bins",
+        "Bins",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Storage&sub_category=Hangers",
+        "Hangers",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Storage&sub_category=Organisers",
+        "Organisers",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Storage&sub_category=Hooks & Holders",
+        "Hooks & Holders",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Storage&sub_category=Laundry Bags",
+        "Laundry Bags",
+      ],
+    ],
+    brands: [
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=H&M",
+        "H&M",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Marks & Spencer",
+        "Marks & Spencer",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Home Centre",
+        "Home Centre",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Spaces",
+        "Spaces",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=D'Decor",
+        "D'Decor",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Story@Home",
+        "Story@Home",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Pure Home & Living",
+        "Pure Home & Living",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Swayam",
+        "Swayam",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Raymond Home",
+        "Raymond Home",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Maspar",
+        "Maspar",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=My Trident",
+        "My Trident",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Cortina",
+        "Cortina",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Random",
+        "Random",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=Ellementry",
+        "Ellementry",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=ROMEE",
+        "ROMEE",
+      ],
+      [
+        "/home-and-living?page=1&limit=21&category=Brands&sub_category=SEJ by Nisha Gupta",
+        "SEJ by Nisha Gupta",
+      ],
+    ],
+  };
 
   //beauty section links object
- const beauty = {
-  makeup: [
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Lipstick", "Lipstick"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Lip Gloss", "Lip Gloss"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Lip Liner", "Lip Liner"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Mascara", "Mascara"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Eyeliner", "Eyeliner"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Kajal", "Kajal"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Eyeshadow", "Eyeshadow"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Foundation", "Foundation"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Primer", "Primer"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Concealer", "Concealer"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Compact", "Compact"],
-    ["/beauty?page=1&limit=21&category=Makeup&sub_category=Nail Polish", "Nail Polish"],
-  ],
-  skincare: [
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Face Moisturiser", "Face Moisturiser"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Cleanser", "Cleanser"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Masks & Peel", "Masks & Peel"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Sunscreen", "Sunscreen"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Serum", "Serum"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Face Wash", "Face Wash"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Eye Cream", "Eye Cream"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Lip Balm", "Lip Balm"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Body Lotion", "Body Lotion"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Body Wash", "Body Wash"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Body Scrub", "Body Scrub"],
-    ["/beauty?page=1&limit=21&category=Skincare&sub_category=Hand Cream", "Hand Cream"],
-  ],
-  hairCare: [
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Shampoo", "Shampoo"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Conditioner", "Conditioner"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Cream", "Hair Cream"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Oil", "Hair Oil"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Gel", "Hair Gel"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Color", "Hair Color"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Serum", "Hair Serum"],
-    ["/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Accessory", "Hair Accessory"],
-  ],
-  fragrence: [
-    ["/beauty?page=1&limit=21&category=Fragrance&sub_category=Perfume", "Perfume"],
-    ["/beauty?page=1&limit=21&category=Fragrance&sub_category=Deodorant", "Deodorant"],
-    ["/beauty?page=1&limit=21&category=Fragrance&sub_category=Body Mist", "Body Mist"],
-  ],
-  appliances: [
-    ["/beauty?page=1&limit=21&category=Appliances&sub_category=Hair Straightener", "Hair Straightener"],
-    ["/beauty?page=1&limit=21&category=Appliances&sub_category=Hair Dryer", "Hair Dryer"],
-    ["/beauty?page=1&limit=21&category=Appliances&sub_category=Epilator", "Epilator"],
-  ],
-  mensGrooming: [
-    ["/beauty?page=1&limit=21&category=Mens Grooming&sub_category=Trimmers", "Trimmers"],
-    ["/beauty?page=1&limit=21&category=Mens Grooming&sub_category=Beard Oil", "Beard Oil"],
-    ["/beauty?page=1&limit=21&category=Mens Grooming&sub_category=Hair Wax", "Hair Wax"],
-  ],
-  beautyGift: [
-    ["/beauty?page=1&limit=21&category=Beauty Gift&sub_category=Beauty Gift", "Beauty Gift"],
-    ["/beauty?page=1&limit=21&category=Beauty Gift&sub_category=Makeup Kit", "Makeup Kit"],
-  ],
-  topBrands: [
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Lakme", "Lakme"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Maybelline", "Maybelline"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Loreal", "Loreal"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Philips", "Philips"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Bath & Body Works", "Bath & Body Works"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=The Body Shop", "The Body Shop"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Biotique", "Biotique"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Mamaearth", "Mamaearth"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Mcaffeine", "Mcaffeine"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Nivea", "Nivea"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Lotus Herbals", "Lotus Herbals"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Loreal Professionnel", "Loreal Professionnel"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=KAMA AYURVEDA", "KAMA AYURVEDA"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=M.A.C", "M.A.C"],
-    ["/beauty?page=1&limit=21&category=Top Brands&sub_category=Forest Essentials", "Forest Essentials"],
-  ],
-};
+  const beauty = {
+    makeup: [
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Lipstick",
+        "Lipstick",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Lip Gloss",
+        "Lip Gloss",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Lip Liner",
+        "Lip Liner",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Mascara",
+        "Mascara",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Eyeliner",
+        "Eyeliner",
+      ],
+      ["/beauty?page=1&limit=21&category=Makeup&sub_category=Kajal", "Kajal"],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Eyeshadow",
+        "Eyeshadow",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Foundation",
+        "Foundation",
+      ],
+      ["/beauty?page=1&limit=21&category=Makeup&sub_category=Primer", "Primer"],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Concealer",
+        "Concealer",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Compact",
+        "Compact",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Makeup&sub_category=Nail Polish",
+        "Nail Polish",
+      ],
+    ],
+    skincare: [
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Face Moisturiser",
+        "Face Moisturiser",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Cleanser",
+        "Cleanser",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Masks & Peel",
+        "Masks & Peel",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Sunscreen",
+        "Sunscreen",
+      ],
+      ["/beauty?page=1&limit=21&category=Skincare&sub_category=Serum", "Serum"],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Face Wash",
+        "Face Wash",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Eye Cream",
+        "Eye Cream",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Lip Balm",
+        "Lip Balm",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Body Lotion",
+        "Body Lotion",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Body Wash",
+        "Body Wash",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Body Scrub",
+        "Body Scrub",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Skincare&sub_category=Hand Cream",
+        "Hand Cream",
+      ],
+    ],
+    hairCare: [
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Shampoo",
+        "Shampoo",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Conditioner",
+        "Conditioner",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Cream",
+        "Hair Cream",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Oil",
+        "Hair Oil",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Gel",
+        "Hair Gel",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Color",
+        "Hair Color",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Serum",
+        "Hair Serum",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Haircare&sub_category=Hair Accessory",
+        "Hair Accessory",
+      ],
+    ],
+    fragrence: [
+      [
+        "/beauty?page=1&limit=21&category=Fragrance&sub_category=Perfume",
+        "Perfume",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Fragrance&sub_category=Deodorant",
+        "Deodorant",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Fragrance&sub_category=Body Mist",
+        "Body Mist",
+      ],
+    ],
+    appliances: [
+      [
+        "/beauty?page=1&limit=21&category=Appliances&sub_category=Hair Straightener",
+        "Hair Straightener",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Appliances&sub_category=Hair Dryer",
+        "Hair Dryer",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Appliances&sub_category=Epilator",
+        "Epilator",
+      ],
+    ],
+    mensGrooming: [
+      [
+        "/beauty?page=1&limit=21&category=Mens Grooming&sub_category=Trimmers",
+        "Trimmers",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Mens Grooming&sub_category=Beard Oil",
+        "Beard Oil",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Mens Grooming&sub_category=Hair Wax",
+        "Hair Wax",
+      ],
+    ],
+    beautyGift: [
+      [
+        "/beauty?page=1&limit=21&category=Beauty Gift&sub_category=Beauty Gift",
+        "Beauty Gift",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Beauty Gift&sub_category=Makeup Kit",
+        "Makeup Kit",
+      ],
+    ],
+    topBrands: [
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Lakme",
+        "Lakme",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Maybelline",
+        "Maybelline",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Loreal",
+        "Loreal",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Philips",
+        "Philips",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Bath & Body Works",
+        "Bath & Body Works",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=The Body Shop",
+        "The Body Shop",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Biotique",
+        "Biotique",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Mamaearth",
+        "Mamaearth",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Mcaffeine",
+        "Mcaffeine",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Nivea",
+        "Nivea",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Lotus Herbals",
+        "Lotus Herbals",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Loreal Professionnel",
+        "Loreal Professionnel",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=KAMA AYURVEDA",
+        "KAMA AYURVEDA",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=M.A.C",
+        "M.A.C",
+      ],
+      [
+        "/beauty?page=1&limit=21&category=Top Brands&sub_category=Forest Essentials",
+        "Forest Essentials",
+      ],
+    ],
+  };
 
   useEffect(() => {
     fetchData();

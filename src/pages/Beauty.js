@@ -29,10 +29,12 @@ function Beauty() {
       if (banner === "latest") {
         console.log("banner", banner);
         res = await axios.get(
-          `http://localhost:8080/api/banner/latest?${query}&mainCategory=beauty`
+          `https://product-gallery.onrender.com/api/banner/latest?${query}&mainCategory=beauty`
         );
       } else {
-        res = await axios.get(`http://localhost:8080/api/beauty?${query}`);
+        res = await axios.get(
+          `https://product-gallery.onrender.com/api/beauty?${query}`
+        );
       }
       const data = res.data;
 

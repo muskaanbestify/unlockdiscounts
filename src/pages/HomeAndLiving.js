@@ -15,7 +15,7 @@ const FashionLayout = lazyLoad(lazy(() => import("./LinkedPageLayout")));
 function HomeAndLiving() {
   const title = "Home and Living";
   const category = "Kid's Wear";
-  
+
   const pathName = useLocation();
 
   const { dispatch, state } = useContext(ProductContext);
@@ -28,7 +28,9 @@ function HomeAndLiving() {
 
   const fetchHomeAndAppliance = async (query) => {
     console.log("query", query);
-    const res = await axios.get(`http://localhost:8080/api/appliances?${query}`);
+    const res = await axios.get(
+      `https://product-gallery.onrender.com/api/appliances?${query}`
+    );
     const data = res.data;
     setPage(parseInt(pageFromQuery) || 1);
 
