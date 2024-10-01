@@ -15,6 +15,7 @@ import Banking from './pages/Banking';
 import SearchResults from './pages/SearchResult';
 import Certificate from "./pages/Certificate";
 import Verification from "./pages/Verification";
+import BlogPost from "./pages/BlogPost";
 
 const AppRoutes = () => (
   <Routes>
@@ -32,6 +33,7 @@ const AppRoutes = () => (
     <Route path="/banking" element={<Banking />} /> 
     <Route path="/certification" element={<Certificate />} />
     <Route path="/verification" element={<Verification />} />
+    <Route path="/:title" element={<BlogPost />} />
   </Routes>
 );
 
