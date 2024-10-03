@@ -56,7 +56,6 @@
 
 
 
-
 import React, { useContext } from 'react';
 import { ProductContext } from '../contexts/ProductContext';
 import './productgallery.css';
@@ -96,6 +95,9 @@ function BankingCategoryLayout({ categories }) {
                   </div>
                 </div>
               ))}
+            {products.filter(product => product.category === category.title).length === 0 && (
+              <p>No products available in this category.</p>
+            )}
           </div>
         </div>
       ))}

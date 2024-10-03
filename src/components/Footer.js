@@ -34,9 +34,10 @@ const WhiteBanner = () => {
             wear. From women to men.
           </p>
           <div className="contact-icons">
-            <img src="/icons/twitter.svg" alt="" width={20} />
-            <img src="/icons/facebook.svg" alt="" width={20} />
-            <img src="/icons/instagram.svg" alt="" width={20} />
+          <a href=''><img src="/icons/twitter.svg" alt="" width={20} /> </a>
+            <a href='https://chat.whatsapp.com/ESR3BCiCQHTIUIZKwRuLMQ' target='_blank'><img src="/icons/whatsapp.png" alt="" width={20} /></a>
+            <a href='https://www.facebook.com/people/UnlockDiscounts/61560425212006/' target='_blank'><img src="/icons/facebook.svg" alt="" width={20} /></a>
+            <a href='https://www.instagram.com/unlock_discounts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target='_blank'><img src="/icons/instagram.svg" alt="" width={20} /></a>
           </div>
         </div>
 
