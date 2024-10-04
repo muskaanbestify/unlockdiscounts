@@ -30,10 +30,12 @@ function WomensWear() {
     if (banner === "latest") {
       console.log("banner", banner);
       res = await axios.get(
-        `http://localhost:8080/api/banner/latest?${query}&mainCategory=womenswear`
+        `https://product-gallery.onrender.com/api/banner/latest?${query}&mainCategory=womenswear`
       );
     } else {
-      res = await axios.get(`http://localhost:8080/api/womenswear?${query}`);
+      res = await axios.get(
+        `https://product-gallery.onrender.com/api/womenswear?${query}`
+      );
     }
     const data = res.data;
     setPage(parseInt(pageFromQuery) || 1);

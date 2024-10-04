@@ -136,7 +136,7 @@ const Carousel = () => {
   const handleFetchProducts = async (query) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/banner/bestselling-gadgets`
+        `https://product-gallery.onrender.com/api/banner/bestselling-gadgets`
       );
       const data = await response.json();
       if (data.success === true) {
@@ -172,7 +172,13 @@ const Carousel = () => {
       <Slider {...settings}>
         {products.length > 0 &&
           products?.map((product) => (
-            <div key={product._id} className="carousel-slide">
+            <div
+              key={product._id}
+              className="carousel-slide"
+              onClick={() => {
+                window.open(product.affiliateLink, "_blank");
+              }}
+            >
               {" "}
               <img
                 src={product.image}

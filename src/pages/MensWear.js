@@ -31,10 +31,12 @@ function MensWear() {
     if (banner === "latest") {
       console.log("banner", banner);
       res = await axios.get(
-        `http://localhost:8080/api/banner/latest?${query}&mainCategory=menswear`
+        `https://product-gallery.onrender.com/api/banner/latest?${query}&mainCategory=menswear`
       );
     } else {
-      res = await axios.get(`http://localhost:8080/api/menswear?${query}`);
+      res = await axios.get(
+        `https://product-gallery.onrender.com/api/menswear?${query}`
+      );
     }
     const data = res.data;
     setPage(parseInt(pageFromQuery) || 1);

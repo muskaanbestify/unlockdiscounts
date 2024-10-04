@@ -20,6 +20,7 @@
     padding: 10px; /* Add padding around the slide */
     width: 90%; /* Reduce width of the slide */
     margin: 0 auto; /* Center the slide */
+    cursor: pointer;
   }
   
   .carousel-image {

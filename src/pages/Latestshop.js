@@ -113,7 +113,6 @@ const Latestshop = () => {
       query: "mainCategory=beauty",
     },
 
-
     // both of them are same
     //page not found
     {
@@ -146,12 +145,12 @@ const Latestshop = () => {
 
   const handleFetchProducts = async (query) => {
     try {
-      // const url = `http://localhost:8080/api/banner/latest?${query}`;
+      // const url = `https://product-gallery.onrender.com/api/banner/latest?${query}`;
       // // encoding the query string
       // console.log("Encoded Query:", url);
 
       const response = await fetch(
-        `http://localhost:8080/api/banner/latest?${query}`
+        `https://product-gallery.onrender.com/api/banner/latest?${query}`
       );
       const data = await response.json();
       console.log(data);
