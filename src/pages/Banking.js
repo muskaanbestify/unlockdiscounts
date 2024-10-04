@@ -30,15 +30,9 @@ const BankingCategoryLayout = React.lazy(() => import('./BankingCategoryLayout')
 
 function Banking() {
   const categories = [
-    {
-      title: "Credit card",
-    },
-    {
-      title: "Zero Savings Account",
-    },
-    {
-      title: "Saving Application",
-    },
+    { title: "Credit card" },
+    { title: "Zero Savings Account" },
+    { title: "Saving Application" },
   ];
 
   return (

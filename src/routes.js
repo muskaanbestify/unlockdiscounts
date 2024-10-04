@@ -32,6 +32,8 @@ const AppRoutes = () => (
     {/*created new route for displaying latest product */}
     <Route path="/electronics" element={<Electronics />} />
     <Route path="/electronics/latest" element={<Electronics />} />
+    <Route path="/electronics/appliances" element={<Electronics />} />
+    <Route path="/electronics/mobiles-accessories" element={<Electronics />} />
     {/*created new route for displaying latest product */}
     <Route path="/beauty" element={<Beauty />} />
     <Route path="/beauty/latest" element={<Beauty />} />{" "}
