@@ -12,49 +12,52 @@ const Latestshop = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 800,
+    speed: 3000, // Control the continuous scroll speed
     slidesToShow: 6,
-    slidesToScroll: 6,
+    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 0, // Continuous scroll (speed is controlled by 'speed' instead)
+    cssEase: "linear", // Smooth linear scrolling without pause
     responsive: [
       {
         breakpoint: 1440,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 5,
+          slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 0,
+          speed: 3000, // Adjust to match larger screen behavior
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
+          slidesToScroll: 1,
           dots: true,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 0,
+          speed: 3000,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 0,
+          speed: 3000,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 0,
+          slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 3000,
+          autoplaySpeed: 0,
+          speed: 3000,
         },
       },
     ],
@@ -145,12 +148,12 @@ const Latestshop = () => {
 
   const handleFetchProducts = async (query) => {
     try {
-      // const url = `https://product-gallery.onrender.com/api/banner/latest?${query}`;
+      // const url = `http://localhost:8080/api/banner/latest?${query}`;
       // // encoding the query string
       // console.log("Encoded Query:", url);
 
       const response = await fetch(
-        `https://product-gallery.onrender.com/api/banner/latest?${query}`
+        `http://localhost:8080/api/banner/latest?${query}`
       );
       const data = await response.json();
       console.log(data);
