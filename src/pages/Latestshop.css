@@ -4,6 +4,8 @@
   margin-top: 10px;
 }
 
+
+
 .latest-carousel-heading {
   text-align:left;
   font-size: 24px;
@@ -17,12 +19,13 @@
 .latest-carousel-slide {
   text-align: center;
   box-sizing: border-box;
+  display: flex;
 }
 
 .latest-carousel-image {
   width: 100%;
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .latest-carousel-description {
