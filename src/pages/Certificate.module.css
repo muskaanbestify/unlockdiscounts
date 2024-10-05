@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.combinedSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #333, #000);
+    color: white;
+    border-radius: 0px 40px 0px 40px; 
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.textSection {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.textSection h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.textSection p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.textSection button {
+    background-color: #fff;
+    color: #000;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.textSection button:hover {
+    background-color: #eee;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 0px 40px 0px 40px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.ccard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    width: 100%; 
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+.buttonPrimary {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.buttonPrimary:hover {
+    background-color: #333;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 900px) {
+    .combinedSection {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .textSection {
+        padding-right: 0; /* Remove right padding on smaller screens */
+    }
+
+    .textSection h1 {
+        font-size: 28px; /* Smaller font size for headings */
+    }
+
+    .textSection p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+    }
+
+    .textSection button {
+        font-size: 14px; /* Smaller button text */
+        padding: 10px; /* Adjust button padding */
+    }
+
+    .card {
+        padding: 20px; /* Reduce padding for cards */
+    }
+
+    .form {
+        gap: 12px; /* Reduce gap between form elements */
+    }
+
+    .buttonPrimary {
+        padding: 10px; /* Adjust button padding */
+    }
+}

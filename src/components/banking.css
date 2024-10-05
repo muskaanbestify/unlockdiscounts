@@ -77,7 +77,7 @@
     background: linear-gradient(to top, #fab37d 0%, #ffffff 100%);
   }
   .banking-component-container h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .banking-component-container .cards {
     gap: 20px;
@@ -87,7 +87,7 @@
   }
   .banking-card .card-title h2 {
     margin: 0; /* Ensure no space around h2 */
-    font-size: 13px;
+    font-size: 18px;
   }
   .banking-card img {
     height: 100px;

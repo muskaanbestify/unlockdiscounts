@@ -1,20 +1,19 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './categoryslider.css';
 
 // Dummy image source; replace with actual image URLs
 const categories = [
-  { name: 'Men', img: './CategorySlider/mens.png' },
-  { name: 'Women', img: './CategorySlider/womens.png' },
-  { name: 'Kid', img: './CategorySlider/kids.png' },
-  { name: 'Skincare', img: './CategorySlider/skincare.jpg' },
-  { name: 'Footwear', img: './CategorySlider/footwear.png' },
-  { name: 'Accessories', img: './CategorySlider/jewellery.jpg' },
-  { name: 'Beauty', img: './CategorySlider/makeup.jpg' },
-  { name: 'Home', img: './CategorySlider/homedecor.png' },
-  { name: 'Gadgets', img: './CategorySlider/gadgets.jpg' }
+  { name: 'Men', img: './CategorySlider/mens.png', path: '/fashion/mens-wear' }, // Added path
+  { name: 'Women', img: './CategorySlider/womens.png', path: '/fashion/womens-wear' },
+  { name: 'Kid', img: './CategorySlider/kids.png', path: '/fashion/kids-wear' },
+  { name: 'Skincare', img: './CategorySlider/skincare.jpg', path: '/beauty' },
+  { name: 'Beauty', img: './CategorySlider/makeup.jpg', path: '/beauty' },
+  { name: 'Home', img: './CategorySlider/homedecor.png', path: '/home-and-living' },
+  { name: 'Gadgets', img: './CategorySlider/gadgets.jpg', path: '/electronics/mobiles-accessories' }
 ];
 
 const CategorySlider = () => {
@@ -32,7 +31,9 @@ const CategorySlider = () => {
                 {categories.map((category, index) => (
                     <div key={index} className='slide'>
                         <div className='gradient-container'>
-                            <img className='category-image' src={category.img} alt={category.name} />
+                            <Link to={category.path}> {/* Make the image clickable */}
+                                <img className='category-image' src={category.img} alt={category.name} />
+                            </Link>
                         </div>
                         <p className='category-slider-text'>
                             {category.name}

@@ -93,62 +93,18 @@ const Latestshop = () => {
       link: "/electronics/latest?page=1",
       query: "category=Electronics",
     },
-
-    //page not found
     {
       id: 5,
-      image: "/Latestshop/image 5.png",
-      description: "Fitness",
-      promo: "Description of fifth product",
-      link: "/fitness/latest?page=1",
-      query: "category=Fitness",
-    },
-
-    {
-      id: 6,
       image: "/Latestshop/image 6.png",
       description: "Beauty Products",
       promo: "Description of sixth product",
-      link: "/beauty/latest?page=1",
+      link: "/beauty",
       query: "mainCategory=beauty",
-    },
-
-    // both of them are same
-    //page not found
-    {
-      id: 7,
-      image: "/Latestshop/image 7.png",
-      description: "Jewellery & Accessories",
-      promo: "Description of seventh product",
-      link: "/jewellery/latest?page=1",
-      query: "category=Jewellery",
-    },
-
-    //page not found
-    // {
-    //   id: 8,
-    //   image: "/Latestshop/image 8.png",
-    //   description: "Jewellery & Accessories",
-    //   promo: "Description of eighth product",
-    //   link: "/jewellery",
-    //   query:"category=Jewellery",
-    // },
-    {
-      id: 8,
-      image: "/Latestshop/image 9.png",
-      description: "Kitchen Utilities",
-      promo: "Description of ninth product",
-      link: "/electronics?page=1",
-      query: "category=Kitchen %26 Table",
     },
   ];
 
   const handleFetchProducts = async (query) => {
     try {
-      // const url = `https://product-gallery.onrender.com/api/banner/latest?${query}`;
-      // // encoding the query string
-      // console.log("Encoded Query:", url);
-
       const response = await fetch(
         `https://product-gallery.onrender.com/api/banner/latest?${query}`
       );

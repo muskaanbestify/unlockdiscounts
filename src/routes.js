@@ -13,12 +13,16 @@ import Beauty from "./pages/Beauty";
 import Banking from "./pages/Banking";
 import SearchResults from "./pages/SearchResult";
 import HomeAndLiving from "./pages/HomeAndLiving";
+import BlogDetail from "./pages/BlogDetails";
+import Certificate from "./pages/Certificate";
+import Verification from "./pages/Verification";
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/search-results" element={<SearchResults />} />
     <Route path="/blog" element={<Blog />} />
+    <Route path="/blog/:id" element={<BlogDetail />} />
     <Route path="/distancelearning" element={<DistanceLearning />} />
     <Route path="/about" element={<About />} />
     <Route path="/fashion/womens-wear" element={<WomensWear />} />
@@ -40,6 +44,8 @@ const AppRoutes = () => (
     {/*created new route for displaying latest product */}
     <Route path="/banking" element={<Banking />} />
     <Route path="/home-and-living" element={<HomeAndLiving />} />
+    <Route path="/certification" element={<Certificate />} />
+    <Route path="/verification" element={<Verification />} />
   </Routes>
 );
 

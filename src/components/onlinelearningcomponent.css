@@ -99,7 +99,7 @@
   }
   .online-learning-component-container h1 {
     font-family: "inter";
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     display: flex;
     justify-content: space-between;
@@ -108,7 +108,7 @@
     gap: 20px;
   }
   .online-learning-component-container .cards .learning-card .card-title {
-    font-size: 13px;
+    font-size:   18px;
     width: 100%;
   }
   .online-learning-component-container .cards .learning-card .card-description {

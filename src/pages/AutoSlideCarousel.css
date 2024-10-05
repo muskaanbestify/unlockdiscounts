@@ -1,81 +1,81 @@
-  .carousel-container {
-    width: 100%;
-    margin: auto;
-  }
-  
-  .carousel-heading {
-    text-align: left;
-    font-size: 24px;
-    font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
-    margin-bottom: 30px;
-    margin-top: 40px;
-    margin-left: 30px;
-    letter-spacing: 10px;
-  }
-  
-  .carousel-slide {
-    text-align: center;
-    box-sizing: border-box;
-    /* Add gradient background in mobile view */
-    padding: 10px; /* Add padding around the slide */
-    width: 90%; /* Reduce width of the slide */
-    margin: 0 auto; /* Center the slide */
-    cursor: pointer;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-  }
-  
-  .carousel-description {
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  
-  .carousel-promo {
-    font-size: 14px;
-    margin-top: 5px;
-    font-weight: bold;
-  }
-  
-  @media (max-width: 1440px) {
-    .carousel-image {
-        max-height: 200px;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .carousel-container {
-      margin-bottom: 10px;
-    }
+.carousel-container {
+  width: 100%;
+  margin: auto;
+}
 
-    .carousel-image {
-        max-height: 180px;
-    }
+.carousel-heading {
+  text-align: left;
+  font-size: 24px;
+  font-family: "YourFontFamily", sans-serif; /* Replace with your desired font family */
+  margin-bottom: 30px;
+  margin-top: 40px;
+  margin-left: 30px;
+  letter-spacing: 10px;
+}
+
+.carousel-slide {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px; /* Add padding around the slide */
+  width: 90%; /* Reduce width of the slide */
+  margin: 0 auto; /* Center the slide */
+  cursor: pointer;
+  height: 200px; /* Set a fixed height for mobile view */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%; /* Make the image fill the slide height */
+  object-fit: contain;
+}
+
+.carousel-description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.carousel-promo {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+  .carousel-image {
+      max-height: 250px;
   }
-  
-  @media (max-width: 768px) {
-    .carousel-image {
-        max-height: 160px;
-    }
-  
-    .carousel-heading {
-        display: none;
-    }
-  
-    .carousel-slide {
-        background: linear-gradient(to bottom, rgb(78, 235, 235), rgb(250, 250, 99)); /* Gradient background */
-        padding: 10px; /* Add padding around the slide */
-        width: 60%; /* Reduce width of the slide */
-        margin: 0 auto; /* Center the slide */
-    }
+}
+
+@media (max-width: 1024px) {
+  .carousel-container {
+      margin-bottom: 10px;
   }
-  
-  @media (max-width: 600px) {
-    .carousel-image {
-        height: 150px;
-    }
+
+  .carousel-image {
+      max-height: 180px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .carousel-image {
+      max-height: 160px;
+  }
+
+  .carousel-heading {
+      display: none;
+  }
+
+  .carousel-slide {
+      background: linear-gradient(to bottom, rgb(78, 235, 235), rgb(250, 250, 99)); /* Gradient background */
+      padding: 10px; /* Add padding around the slide */
+      width: 60%; /* Reduce width of the slide */
+      margin: 0 auto; /* Center the slide */
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-image {
+      height: 100px;
+  }
+}

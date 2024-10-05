@@ -15,27 +15,25 @@ const ProductProvider = ({ children }) => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
-  const fetchProducts = async () => {
-    dispatch({ type: "FETCH_INIT" }); // Start loading
-
+  const fetchProducts = async (url) => {
     try {
-      const response = await axios.get(
-        `https://products2-tt3o.onrender.com/api/products?page=${page}&limit=21`
-      );
-
+      const response = await axios.get(`${url}&page=${page}&limit=21`);
       if (response.data.length === 0) {
         setHasMore(false);
-      } else {
-        dispatch({
-          type: "FETCH_SUCCESS",
-          payload: response.data,
-        });
       }
+
+      dispatch({
+        type: "FETCH_SUCCESS",
+        payload: [...state.products, ...response.data],
+      });
     } catch (error) {
       dispatch({ type: "FETCH_ERROR", payload: error.message });
-      console.error(error);
     }
   };
+
+  useEffect(() => {
+    setPage(1); // Reset page to 1 on initial render
+  }, []);
 
   const handleLoadMore = () => {
     if (hasMore) {
@@ -43,14 +41,8 @@ const ProductProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, [page]);
-
   return (
-    <ProductContext.Provider
-      value={{ state, dispatch, handleLoadMore, hasMore }}
-    >
+    <ProductContext.Provider value={{ state, dispatch, fetchProducts, handleLoadMore }}>
       {children}
     </ProductContext.Provider>
   );

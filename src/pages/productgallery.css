@@ -150,6 +150,6 @@
   }
 
   .filter-icon {
-    display: block; /* Show filter icon on mobile view */
+    display: none; /* Show filter icon on mobile view */
   }
 }

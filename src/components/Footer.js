@@ -57,6 +57,11 @@ const WhiteBanner = () => {
                   Colleges
                 </Link>
               </li>
+              <li>
+                <Link className="link" to="/blog">
+                  Blogs
+                </Link>
+              </li>
             </nav>
           </div>
 
@@ -121,6 +126,26 @@ const WhiteBanner = () => {
               <li>
                 <Link className="link" to="/banking">
                   Saving Applications
+                </Link>
+              </li>
+            </nav>
+          </div>
+          <div className="col">
+            <h2 className="sub-heading">OTHERS</h2>
+            <nav>
+              <li>
+                <Link className="link" to="/certification">
+                  Certificate Verification
+                </Link>
+              </li>
+              <li>
+                <Link className="link" target="_blank" to="https://www.linkedin.com/company/unlockdiscounts/jobs/">
+                  Internships
+                </Link>
+              </li>
+              <li>
+                <Link className="link" target="_blank" to="https://www.linkedin.com/company/unlockdiscounts/jobs/">
+                  Jobs
                 </Link>
               </li>
             </nav>

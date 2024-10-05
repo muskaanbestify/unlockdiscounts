@@ -57,81 +57,6 @@ const Carousel = () => {
     ],
   };
 
-  const slides = [
-    {
-      id: 1,
-      image: "./autoslidecarousel/image1.jpg",
-      description: "Catchy description 1",
-      promo: "Up to 50% off",
-    },
-    {
-      id: 2,
-      image: "./autoslidecarousel/image2.jpg",
-      description: "Catchy description 2",
-      promo: "Buy one get one free",
-    },
-    {
-      id: 3,
-      image: "./autoslidecarousel/image3.jpg",
-      description: "Catchy description 3",
-      promo: "30% off new arrivals",
-    },
-    {
-      id: 4,
-      image: "./autoslidecarousel/image4.jpg",
-      description: "Catchy description 4",
-      promo: "Exclusive deals",
-    },
-    {
-      id: 5,
-      image: "./autoslidecarousel/image5.jpg",
-      description: "Catchy description 5",
-      promo: "Limited time offer",
-    },
-    {
-      id: 6,
-      image: "./autoslidecarousel/image6.jpg",
-      description: "Catchy description 6",
-      promo: "Free shipping",
-    },
-    {
-      id: 7,
-      image: "./autoslidecarousel/image7.jpg",
-      description: "Catchy description 7",
-      promo: "Up to 70% off",
-    },
-    {
-      id: 8,
-      image: "./autoslidecarousel/image8.jpg",
-      description: "Catchy description 8",
-      promo: "Holiday specials",
-    },
-    {
-      id: 9,
-      image: "./autoslidecarousel/image9.jpg",
-      description: "Catchy description 9",
-      promo: "New collection",
-    },
-    {
-      id: 10,
-      image: "./autoslidecarousel/image10.jpg",
-      description: "Catchy description 10",
-      promo: "Flash sale",
-    },
-    {
-      id: 11,
-      image: "./autoslidecarousel/image11.jpg",
-      description: "Catchy description 11",
-      promo: "Discounted prices",
-    },
-    {
-      id: 12,
-      image: "./autoslidecarousel/image12.jpg",
-      description: "Catchy description 12",
-      promo: "Limited stock",
-    },
-  ];
-
   const handleFetchProducts = async (query) => {
     try {
       const response = await fetch(
@@ -143,19 +68,6 @@ const Carousel = () => {
         setProducts((prevProducts) => [...prevProducts, ...data.products]);
         console.log(data);
       }
-
-      /*
-    {
-    "_id": "66e2ce1eff34f7c10ad94c05",
-    "title": "HERE&NOW",
-    "description": "Men Smart Relaxed Fit Pure Cotton Cargo Jeans",
-    "image": "https://drive.google.com/thumbnail?id=1tKKdpBrn4WaBO4329ZmN3WbEfiQH6dCg",
-    "affiliateLink": "https://myntr.it/uITCcD8",
-    "category": "Bottomwear",
-    "sub_category": "Jeans"
-}
-     */
-
       console.log(data);
     } catch (error) {
       console.log(error);

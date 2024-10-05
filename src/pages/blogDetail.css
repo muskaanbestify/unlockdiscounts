@@ -1,0 +1,58 @@
+/* Container for the entire blog detail */
+.blog_detail_container {
+    max-width: 800px; /* Max width for the blog card */
+    margin: 20px auto; /* Center align with margin on top and bottom */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background */
+  }
+  
+  /* Main blog detail card */
+  .blog_detail_card {
+    padding: 20px; /* Padding inside the card */
+  }
+  
+  /* Title of the blog */
+  .blog_detail_title {
+    font-size: 2rem; /* Font size for the title */
+    margin-bottom: 15px; /* Space below the title */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center align the title */
+  }
+  
+  /* Image styling */
+  .blog_detail_image {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded edges for the image */
+    margin-bottom: 20px; /* Space below the image */
+    object-fit: cover; /* Ensure image covers the area */
+  }
+  
+  /* Description of the blog */
+  .blog_detail_description {
+    font-size: 1.2rem; /* Font size for description */
+    color: #555; /* Slightly lighter text color */
+    margin-bottom: 15px; /* Space below description */
+  }
+  
+  /* Content of the blog */
+  .blog_detail_content {
+    font-size: 1rem; /* Font size for content */
+    color: #333; /* Dark text color */
+    line-height: 1.6; /* Line height for readability */
+    text-align: justify; /* Justify text alignment */
+    overflow-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; /* Break long words */
+    hyphens: auto; /* Add hyphenation */
+  }
+  
+  /* Loading and error states */
+  .loading, .error {
+    text-align: center; /* Center align loading/error messages */
+    font-size: 1.2rem; /* Font size for loading/error messages */
+    color: #ff5722; /* Error color */
+    margin-top: 20px; /* Space above the message */
+  }
+  

@@ -6,8 +6,6 @@ import "./productgallery.css";
 const LinkedPageLayout = ({
   category,
   title,
-
-  //for pagination
   page = 1,
   extraPage,
   handleLoadMoreProducts,
@@ -16,9 +14,7 @@ const LinkedPageLayout = ({
   const { products, loading, error } = state;
   const [filterOpen, setFilterOpen] = useState(false);
 
-  // const products = products.filter(
-  //   (product) => product.category === category
-  // );
+  // Total number of products
   const totalProducts = products.length;
 
   useEffect(() => {
@@ -40,36 +36,30 @@ const LinkedPageLayout = ({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasMore, handleLoadMore]);
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   const toggleFilter = () => {
     setFilterOpen(!filterOpen);
   };
 
-  // function to load more products
-  const handleNextPage = (page) => {
+  // Function to load more products based on pagination
+  const handleNextPage = (newPage) => {
     const url = window.location.href;
-    let queryString = url ? url.split("?")[1] : "";
-    console.log("queryString", queryString);
+    let queryString = new URLSearchParams(url.split("?")[1]);
 
-    if (!queryString) {
-      queryString += `page=${page}`;
-    }
-    if (queryString && !queryString.includes("page")) {
-      queryString += `&page=${page}`;
-    }
-    let updatedQuery = queryString.split("&").map((item) => {
-      if (item.includes("page")) {
-        return `page=${page}`;
-      }
-      return item;
-    });
+    // Update the page query parameter
+    queryString.set("page", newPage);
 
-    updatedQuery = updatedQuery.join("&");
-    let updatedQueryString = url.split("?")[0] + "?" + updatedQuery;
+    const updatedQueryString = `${url.split("?")[0]}?${queryString.toString()}`;
 
-    console.log("updatedQuery", updatedQuery);
-    window.open(updatedQueryString, "_self");
-    handleLoadMoreProducts(updatedQuery);
+    console.log("updatedQuery", updatedQueryString);
+    window.open(updatedQueryString, "_self"); // Navigate to the updated URL
+    handleLoadMoreProducts(queryString.toString());
   };
+
   if (loading && products.length === 0) {
     return <div>Loading...</div>;
   }
@@ -101,6 +91,7 @@ const LinkedPageLayout = ({
             />
           </div>
         </div>
+
         <div className="product-cards">
           {products.map((product, index) => (
             <div key={index} className="product-card">
@@ -123,76 +114,28 @@ const LinkedPageLayout = ({
           ))}
         </div>
 
-        {products && products.length >= 3 && (
-          <div
-            className="pagination-buttons"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "10px",
-              margin: "20px 0",
-              // backgroundColor: "red",
-              marginTop: "20px",
-            }}
-          >
+        {products && products.length > 0 && (
+          <div className="pagination-buttons" style={paginationStyles}>
             {page > 1 && (
               <button
-                // onClick={() => setPage((prevPage) => prevPage - 1)}
-                style={{
-                  backgroundColor: "white",
-                  border: "1px solid gray",
-                  borderRadius: "5px",
-                  padding: "5px 10px",
-                  cursor: "pointer",
-                }}
+                style={paginationButtonStyles}
                 onClick={() => handleNextPage(page - 1)}
               >
                 Prev
               </button>
             )}
-
-            <button
-              // onClick={() => setPage((prevPage) => prevPage + 1)}
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                border: "1px solid gray",
-                borderRadius: "5px",
-                padding: "5px 10px",
-                cursor: "pointer",
-              }}
-              onClick={() => handleNextPage(page)}
-            >
-              {page}
-            </button>
-
+            <button style={activePageButtonStyles}>{page}</button>
             {extraPage > 0 && (
               <button
-                // onClick={() => setPage((prevPage) => prevPage + 1)}
-                style={{
-                  backgroundColor: "white",
-                  border: "1px solid gray",
-                  borderRadius: "5px",
-                  padding: "5px 10px",
-                  cursor: "pointer",
-                }}
+                style={paginationButtonStyles}
                 onClick={() => handleNextPage(page + 1)}
               >
                 {page + 1}
               </button>
             )}
-
             {extraPage > 1 && (
               <button
-                // onClick={() => setPage((prevPage) => prevPage + 1)}
-                style={{
-                  backgroundColor: "white",
-                  border: "1px solid gray",
-                  borderRadius: "5px",
-                  padding: "5px 10px",
-                  cursor: "pointer",
-                }}
+                style={paginationButtonStyles}
                 onClick={() => handleNextPage(page + 2)}
               >
                 More
@@ -215,6 +158,31 @@ const LinkedPageLayout = ({
       )}
     </div>
   );
+};
+
+const paginationStyles = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "10px",
+  margin: "20px 0",
+};
+
+const paginationButtonStyles = {
+  backgroundColor: "white",
+  border: "1px solid gray",
+  borderRadius: "5px",
+  padding: "5px 10px",
+  cursor: "pointer",
+};
+
+const activePageButtonStyles = {
+  backgroundColor: "black",
+  color: "white",
+  border: "1px solid gray",
+  borderRadius: "5px",
+  padding: "5px 10px",
+  cursor: "pointer",
 };
 
 export default LinkedPageLayout;

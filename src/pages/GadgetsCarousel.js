@@ -8,7 +8,7 @@ const Carousel = () => {
   const [products, setProducts] = useState([]);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 800,
     slidesToShow: 6,
