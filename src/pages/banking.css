@@ -1,0 +1,109 @@
+/* Container for the entire banking page */
+.banking-page-container {
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  /* Main title for the banking page */
+  .banking-main-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Sub-description text */
+  .banking-sub-description {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Category section styling */
+  .banking-category-section {
+    margin-bottom: 40px;
+  }
+  
+  /* Category title styling */
+  .banking-category-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+    padding-left: 15px;
+    font-family: notable;
+  }
+  
+  /* Container for the product cards */
+  .banking-product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  /* Individual product card */
+  .banking-product-card {
+    width: calc(32% - 10px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Product image */
+  .banking-product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  /* Product title */
+  .banking-product-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  /* Product description */
+  .banking-product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  /* Buy Now button */
+  .banking-buy-now-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .banking-buy-now-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .banking-product-card {
+      width: calc(48% - 10px); /* Two products per row for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banking-product-card {
+      width: 100%; /* Full width product cards for mobile screens */
+    }
+  }
+  

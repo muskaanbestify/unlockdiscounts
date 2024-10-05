@@ -1,101 +1,70 @@
-
-// import React, { useContext, useMemo } from 'react';
-// import { ProductContext } from '../contexts/ProductContext';
-// import './productgallery.css';
-
-// function BankingCategoryLayout({ categories }) {
-//   const { state } = useContext(ProductContext);
-//   const { products, loading, error } = state;
-
-//   const memoizedCategoryProducts = useMemo(() => {
-//     return categories.reduce((acc, category) => {
-//       acc[category.title] = products.filter(product => product.category === category.title);
-//       return acc;
-//     }, {});
-//   }, [products, categories]);
-
-//   if (loading) {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (error) {
-//     return <div>Error: {error}</div>;
-//   }
-
-//   return (
-//     <div className="productpage-container">
-//       <h1 className="maincategory-title">Banking Page</h1>
-//       <p className="subdesc">Unlock Financial Freedom: Discover Smart Banking Solutions with Us!</p>
-//       <div className="common-banner">
-//         <img src="/banking/bankingbanner.jpg" alt="Common Banner" className="common-banner-image" />
-//       </div>
-//       {categories.map((category, index) => (
-//         <div key={index} className="category-section">
-//           <h2 className="category-title">{category.title}</h2>
-//           <div className="product-cards">
-//             {memoizedCategoryProducts[category.title].map((product, index) => (
-//               <div key={index} className="product-card">
-//                 <div className="product-details">
-//                   <div className="product-image">
-//                     <img src={product.image} alt={product.title} />
-//                   </div>
-//                   <h3 className="product-title">{product.title}</h3>
-//                   <p className="product-description">{product.description}</p>
-//                   <a href={product.affiliateLink} target="_blank" rel="noopener noreferrer" className="buy-now-button">BUY NOW</a>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default BankingCategoryLayout;
-
-
-
-import React, { useContext } from 'react';
-import { ProductContext } from '../contexts/ProductContext';
-import './productgallery.css';
+import React from 'react';
+import './banking.css';
 
 function BankingCategoryLayout({ categories }) {
-  const { state } = useContext(ProductContext);
-  const { products, loading, error } = state;
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // Static product data for the Banking categories
+  const products = [
+    {
+      title: 'Credit Card',
+      category: 'Credit card',
+      image: '/images/creditcard.png',
+      description: 'Best credit card offers.',
+      affiliateLink: '#',
+    },
+    {
+      title: 'Zero Balance Savings Account',
+      category: 'Zero Savings Account',
+      image: '/images/savings.png',
+      description: 'Zero balance savings account offers.',
+      affiliateLink: '#',
+    },
+    {
+      title: 'Savings Application',
+      category: 'Saving Application',
+      image: '/images/savingapp.png',
+      description: 'Manage your savings efficiently.',
+      affiliateLink: '#',
+    },
+  ];
 
   return (
-    <div className="productpage-container">
-      <h1 className="maincategory-title">Banking Page</h1>
-      <p className="subdesc">Unlock Financial Freedom: Discover Smart Banking Solutions with Us!</p>
-      <div className="common-banner">
-        <img src="/banking/bankingbanner.avif" alt="Common Banner" className="common-banner-image" loading="lazy" />
-      </div>
+    <div className="banking-page-container">
+      <h1 className="banking-main-title">Banking Page</h1>
+      <p className="banking-sub-description">
+        Unlock Financial Freedom: Discover Smart Banking Solutions with Us!
+      </p>
       {categories.map((category, index) => (
-        <div key={index} className="category-section">
-          <h2 className="category-title">{category.title}</h2>
-          <div className="product-cards">
+        <div key={index} className="banking-category-section">
+          <h2 className="banking-category-title">{category.title}</h2>
+          <div className="banking-product-cards">
             {products
-              .filter(product => product.category === category.title)
+              .filter((product) => product.category === category.title)
               .map((product, idx) => (
-                <div key={idx} className="product-card">
-                  <div className="product-details">
-                    <img src={product.image} alt={product.title} className="product-image" loading="lazy" />
-                    <h3 className="product-title">{product.title}</h3>
-                    <p className="product-description">{product.description}</p>
-                    <a href={product.affiliateLink} target="_blank" rel="noopener noreferrer" className="buy-now-button">BUY NOW</a>
+                <div key={idx} className="banking-product-card">
+                  <div className="banking-product-details">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="banking-product-image"
+                      loading="lazy"
+                    />
+                    <h3 className="banking-product-title">{product.title}</h3>
+                    <p className="banking-product-description">
+                      {product.description}
+                    </p>
+                    <a
+                      href={product.affiliateLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="banking-buy-now-button"
+                    >
+                      BUY NOW
+                    </a>
                   </div>
                 </div>
               ))}
-            {products.filter(product => product.category === category.title).length === 0 && (
+            {products.filter((product) => product.category === category.title)
+              .length === 0 && (
               <p>No products available in this category.</p>
             )}
           </div>
