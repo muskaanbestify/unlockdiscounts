@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React, { useState, useEffect, useRef } from "react";
 import "./header.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import Fuse from "fuse.js";
 import Box from "@mui/material/Box";
@@ -14,6 +14,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import offerBanner from "../images/50-off.png";
 function Header() {
+  const location = useLocation();
   const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -22,6 +23,11 @@ function Header() {
   const [hamburger, setHamburger] = useState(false);
   const [mainFashionDropdown, setMainFashionDropdown] = useState(null);
   const [subFashionDropdown, setSubFashionDropdown] = useState(null);
+
+  useEffect(() => {
+    handleDropDown(null);
+    console.log("location =>", location);
+  }, [location]);
 
   const searchContainerRef = useRef(null);
   const navigate = useNavigate();
@@ -53,10 +59,10 @@ function Header() {
         `https://product-gallery.onrender.com/api/womenswear?pageNo=1&limit=25&category=${category}&sub_category=${sub_category}`
       );
       const reslt = response.data;
-      console.log("Womenswear data connected Successfully:", reslt);
+      // console.log("Womenswear data connected Successfully:", reslt);
       return reslt;
     } catch (error) {
-      console.log("Failed to connect womenswear data:", error);
+      // console.log("Failed to connect womenswear data:", error);
     }
   };
   // console.log(connectwomensdata);
@@ -2346,7 +2352,12 @@ function Header() {
                         </span>
                       </Box>
                       {subFashionDropdown === "kids-boys-clothing" && (
-                        <Box onClick={handleCloseButton}>
+                        <Box
+                          onClick={() => {
+                            console.log("clicked Boys Clothing");
+                            handleCloseButton();
+                          }}
+                        >
                           {kids.boysClothing.map((link, index) => {
                             return (
                               <Link

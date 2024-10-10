@@ -142,7 +142,7 @@ const Carousel = () => {
       if (data.success === true) {
         // dispatch({ type: "SET_PRODUCTS", payload: data?.products });
         setProducts((prevProducts) => [...prevProducts, ...data.products]);
-        console.log(data);
+        // console.log(data);
       }
 
       /*
@@ -157,7 +157,7 @@ const Carousel = () => {
 }
      */
 
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log(error);
     }

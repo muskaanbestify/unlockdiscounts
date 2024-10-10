@@ -22,7 +22,7 @@ const LinkedPageLayout = ({
   const totalProducts = products.length;
 
   useEffect(() => {
-    console.log("Products: in trending => ", products);
+    // console.log("Products: in trending => ", products);
   }, [products]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const LinkedPageLayout = ({
   const handleNextPage = (page) => {
     const url = window.location.href;
     let queryString = url ? url.split("?")[1] : "";
-    console.log("queryString", queryString);
+    // console.log("queryString", queryString);
 
     if (!queryString) {
       queryString += `page=${page}`;
@@ -66,7 +66,7 @@ const LinkedPageLayout = ({
     updatedQuery = updatedQuery.join("&");
     let updatedQueryString = url.split("?")[0] + "?" + updatedQuery;
 
-    console.log("updatedQuery", updatedQuery);
+    // console.log("updatedQuery", updatedQuery);
     window.open(updatedQueryString, "_self");
     handleLoadMoreProducts(updatedQuery);
   };

@@ -31,11 +31,11 @@ function Electronics() {
         `https://product-gallery.onrender.com/api/banner/latest?${query}&category=Electronics`
       );
       const data = res.data;
-      console.log("data", data);
+      // console.log("data", data);
 
       setPage(parseInt(pageFromQuery) || 1);
       if (data.success) {
-        console.log("data", data);
+        // console.log("data", data);
         dispatch({ type: "SET_PRODUCTS", payload: data?.products });
         setExtraPage(data.extraPages);
       }

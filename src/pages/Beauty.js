@@ -27,7 +27,7 @@ function Beauty() {
     try {
       let res;
       if (banner === "latest") {
-        console.log("banner", banner);
+        // console.log("banner", banner);
         res = await axios.get(
           `https://product-gallery.onrender.com/api/banner/latest?${query}&mainCategory=beauty`
         );
@@ -41,7 +41,7 @@ function Beauty() {
       setPage(parseInt(pageFromQuery) || 1);
 
       if (data.success) {
-        console.log("data", data);
+        // console.log("data", data);
         setExtraPage(data.extraPages);
 
         if (banner === "latest") {
@@ -64,8 +64,8 @@ function Beauty() {
     const url = window.location.href;
     const queryString = url ? url.split("?")[1] : "";
     const checkBanner = url.split("?")[0].split("/");
-    console.log("checkBanner", checkBanner);
-    console.log("queryString", queryString);
+    // console.log("checkBanner", checkBanner);
+    // console.log("queryString", queryString);
 
     fetchBeautyProducts(queryString, checkBanner[checkBanner.length - 1]);
   }, [pathName]);

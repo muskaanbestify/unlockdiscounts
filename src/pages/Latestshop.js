@@ -153,12 +153,12 @@ const Latestshop = () => {
         `https://product-gallery.onrender.com/api/banner/latest?${query}`
       );
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (data.success === true) {
         dispatch({ type: "SET_PRODUCTS", payload: data?.products });
-        console.log(state);
+        // console.log(state);
       }
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log(error);
     }

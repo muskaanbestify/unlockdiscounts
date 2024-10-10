@@ -30,7 +30,7 @@ function KidsWear() {
 
   // Fetching products from the database
   const fetchKidsWear = async (query = "", banner = "") => {
-    console.log("query", query);
+    // console.log("query", query);
 
     let res;
     if (banner === "latest") {
@@ -46,8 +46,8 @@ function KidsWear() {
     setPage(parseInt(pageFromQuery) || 1);
 
     if (data.success) {
-      console.log("data", data.kidswear);
-      console.log("extraPage", data.extraPages);
+      // console.log("data", data.kidswear);
+      // console.log("extraPage", data.extraPages);
 
       if (banner === "latest") {
         dispatch({ type: "SET_PRODUCTS", payload: data?.products });
@@ -60,21 +60,21 @@ function KidsWear() {
     if (!data.success) {
       dispatch({ type: "FETCH_ERROR", payload: data.message });
     }
-    console.log("res", res.data);
+    // console.log("res", res.data);
   };
 
   useEffect(() => {
     const url = window.location.href;
     const queryString = url ? url.split("?")[1] : "";
     const checkBanner = url.split("?")[0].split("/");
-    console.log("checkBanner", checkBanner);
-    console.log("queryString", queryString);
+    // console.log("checkBanner", checkBanner);
+    // console.log("queryString", queryString);
 
     // if(checkBanner[checkBanner.length - 1]) {
     // queryString += "&latest=true"
     fetchKidsWear(queryString, checkBanner[checkBanner.length - 1]);
 
-    console.log("checkBanner", checkBanner);
+    // console.log("checkBanner", checkBanner);
   }, [pathName]);
 
   // Checking if the category is available in the database

@@ -26,10 +26,10 @@ function MensWear() {
   const pageFromQuery = new URLSearchParams(pathName.search).get("page");
 
   const fetchMensWear = async (query = "", banner = "") => {
-    console.log("banner", banner);
+    // console.log("banner", banner);
     let res;
     if (banner === "latest") {
-      console.log("banner", banner);
+      // console.log("banner", banner);
       res = await axios.get(
         `https://product-gallery.onrender.com/api/banner/latest?${query}&mainCategory=menswear`
       );
@@ -42,8 +42,8 @@ function MensWear() {
     setPage(parseInt(pageFromQuery) || 1);
 
     if (data.success) {
-      console.log("data", data.menswear);
-      console.log("extraPage", data.extraPages);
+      // console.log("data", data.menswear);
+      // console.log("extraPage", data.extraPages);
       if (banner === "latest") {
         dispatch({ type: "SET_PRODUCTS", payload: data?.products });
       } else {
@@ -55,17 +55,17 @@ function MensWear() {
     if (!data.success) {
       dispatch({ type: "FETCH_ERROR", payload: data.message });
     }
-    console.log("res", res.data);
+    // console.log("res", res.data);
   };
 
   useEffect(() => {
     const url = window.location.href;
     const queryString = url ? url.split("?")[1] : "";
     const checkBanner = url.split("?")[0].split("/");
-    console.log("checkBanner", checkBanner);
-    console.log("queryString", queryString);
+    // console.log("checkBanner", checkBanner);
+    // console.log("queryString", queryString);
 
-    console.log("queryString", queryString);
+    // console.log("queryString", queryString);
     fetchMensWear(queryString, checkBanner[checkBanner.length - 1]);
   }, [pathName]);
 

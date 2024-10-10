@@ -27,7 +27,7 @@ function HomeAndLiving() {
   // console.log("query => ", query);
 
   const fetchHomeAndAppliance = async (query) => {
-    console.log("query", query);
+    // console.log("query", query);
     const res = await axios.get(
       `https://product-gallery.onrender.com/api/appliances?${query}`
     );
@@ -35,8 +35,8 @@ function HomeAndLiving() {
     setPage(parseInt(pageFromQuery) || 1);
 
     if (data.success) {
-      console.log("data", data.appliance);
-      console.log("extraPage", data.extraPages);
+      // console.log("data", data.appliance);
+      // console.log("extraPage", data.extraPages);
 
       setExtraPage(data.extraPages);
       dispatch({ type: "SET_PRODUCTS", payload: data.appliance });
